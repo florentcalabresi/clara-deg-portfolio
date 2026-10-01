@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clara Degrange</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,700;9..144,800&amp;display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="flex flex-col">
+    <header class="flex justify-between items-center px-24 border-b-[3px] border-[#172554] h-[56px] w-full">
+        <div class="flex">
+            <span class="focus-ring display text-2xl font-extrabold tracking-tight">CLARA<span class="text-[#f53686]">!</span></span>
+
+        </div>
+        <div class="flex">
+            <ul class="flex gap-4 font-bold">
+                <li><a href="#about">À propos</a></li>
+                <li><a href="">Projets</a></li>
+                <li><a href="">Galerie</a></li>
+                <li><a href="">Expériences</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <section id="hero" class="relative flex gap-24 items-center bg-[#5170ff]  px-5 py-16 lg:px-8 lg:py-24">
+            <!--<div class="absolute inset-0 bg-[radial-gradient(#000000_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none"></div>-->
+            <div class="bubble-test absolute -left-10 top-16 h-36 w-36 bg-[var(--yellow)] rounded-full z-1"></div>
+            <div class="relative z-10 flex flex-1 gap-6 flex-col">
+                <div class="flex gap-4">
+                    <span
+                        class="pcm_badge bg-[var(--yellow)] border-2 border-[#172554] bg-[var(--violet)] shadow-[5px_5px_0_#172554] rounded-full rotate-[0deg] px-4 py-2 text-sm font-bold">
+                        PORTFOLIO · COMMUNICATION &amp; MÉDIAS
+                    </span>
+                    <div
+                        class="flex items-center gap-2 rounded-full bg-[#172554] px-3 py-2 text-xs font-bold text-white">
+                        <span class="h-2.5 w-2.5 animate-pulse rounded-full bg-[#f53686]"></span>
+                        REC
+                    </div>
+                </div>
+                <span class="text-2xl font-[Fraunces] text-white">
+                    Je suis Clara, bienvenue dans mon univers
+                </span>
+                <span class="text-[18px] font-bold text-white">Étudiante en communication, animatrice et créatrice de contenus</span>
+                <span class="text-6 text-white w-34">J’aime raconter, créer et donner vie aux idées. À travers la communication et les médias, je<br />cherche à apprendre, à rencontrer les autres et à construire des projets qui ont du sens.</span>
+                <div class="flex gap-4">
+                    <a
+                        href="#about"
+                        class="bg-[var(--yellow)] select-none cursor-pointer hover:scale-105 transition-all hover:-rotate-2 gap-2 flex rounded-full w-fit px-6 py-3 font-semibold border-2 border-[#172554] bg-[var(--violet)] shadow-[5px_5px_0_#172554]">
+                        <span>Découvrir mon univers</span>
+                        <i data-lucide="move-down-right"></i>
+                    </a>
+                    <a
+                        href="#"
+                        class="bg-white select-none cursor-pointer hover:scale-105 transition-all hover:-rotate-2 gap-2 flex rounded-full w-fit px-6 py-3 font-semibold border-2 border-[#172554] bg-[var(--violet)] shadow-[5px_5px_0_#172554]">
+                        <span>Voir les projets</span>
+                        <i data-lucide="play"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="relative z-10 flex">
+                <div
+                    class="flex flex-col gap-4 rounded-[2.5rem_1rem_2.5rem_1rem] border-[#172554] bg-[var(--violet)] !text-white p-6 shadow_animate_card">
+                    <div class="flex justify-between">
+                        <div class="wave text-[#ffd53d]" aria-hidden="true">
+                            <span></span><span></span><span></span><span></span><span></span>
+                        </div>
+                        <span
+                            class="rounded-full flex items-center bg-[var(--pink)] px-3 py-1 text-xs font-bold tracking-[.18em]">
+                            ON AIR
+                        </span>
+                    </div>
+                    <span class="font-bold text-3xl">Raconter, écouter, créer.</span>
+                    <span>Je construis mon parcours entre plateaux, micros,<br /> écriture et projets collectifs.</span>
+                    <div class="flex items-center gap-3 w-full rounded-xl">
+                        <div class="h-2 flex-1 bg-amber-400 rounded-full"></div>
+                        <div class="h-2 w-14 bg-white/30 rounded-full"></div>
+                        <div class="h-2 w-7 bg-white/30 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <secion id="about" class="relative flex justify-between bg-[var(--cream)] py-24 pr-24">
+            <div class="flex flex-col pl-8 border_animate_about h-fit border-[var(--turquoise)]">
+                <span class="uppercase w-fit bg-[var(--yellow)] px-4 py-1 rounded-full font-semibold">À propos</span>
+                <h2 class="text-[18px] mt-6 font-[Fraunces] font-bold">Une voix curieuse, attentive et engagée.</h2>
+                <div class="mt-8 flex items-center gap-3 font-bold text-[#f53686]">
+                    <i data-lucide="sparkles" class="h-6 w-6"></i><span>✦</span><span>✦</span><span>✦</span>
+                </div>
+            </div>
+            <div
+                class="flex flex-col gap-4 rounded-[2.5rem_1rem_2.5rem_1rem]  border-[#172554] bg-white !text-white p-6 shadow_animate_card">
+                <span id="about_p1" class="text-[var(--ink)]">ABOUT_P1_VAR</span>
+                <span id="about_p2" class="text-[var(--ink)]">ABOUT_P2_VAR</span>
+                <div class="mt-8 grid gap-3 sm:grid-cols-3">
+                    <div class="rounded-[1.3rem] border-2 border-[#172554] bg-[#f53686] p-4 text-white">
+                        <i data-lucide="pen-line" class="mb-3 h-5 w-5"></i>
+                        <p data-template-id="about-pill-one" class="canva-text text-sm font-bold"
+                            style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">
+                            Écriture</p>
+                    </div>
+                    <div class="rounded-[1.3rem] border-2 border-[#172554] bg-[#18c7c1] p-4">
+                        <i data-lucide="users" class="mb-3 h-5 w-5 text-[var(--ink)]"></i>
+                        <p data-template-id="about-pill-two" class="canva-text text-sm font-bold"
+                            style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">
+                            Esprit d’équipe</p>
+                    </div>
+                    <div class="rounded-[1.3rem] border-2 border-[#172554] bg-[#ffd53d] p-4">
+                        <i data-lucide="sparkles" class="mb-3 h-5 w-5 text-[var(--ink)]"></i>
+                        <p data-template-id="about-pill-three" class="canva-text text-sm font-bold"
+                            style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">
+                            Curiosité</p>
+                    </div>
+                </div>
+            </div>
+        </secion>
+        <secion id="skills" class="relative flex flex-col gap-4 px-12 bg-[var(--cream)] py-24 pr-24">
+            <span class="uppercase px-4 w-fit py-1 text-white rounded-full font-semibold bg-[var(--violet)]">Compétences</span>
+            <span class="text-[18px] font-bold font-[Fraunces]">Des outils au service des idées.</span>
+            <span class="text-[12px]">Des pratiques explorées avec attention, entre expression, technique et travail collectif.</span>
+            <div class="grid grid-cols-3 gap-4">
+                <div class="flex bg-[var(--yellow)] w-full border-[3px] border-[#172554] rounded-[2.5rem_1rem_2.5rem_1rem] p-6 transition-all hover:-rotate-2 hover:translateX-2 hover:shadow-[5px_5px_0_#172554]">
+                    <span>Médias et animation</span>
+                </div>
+                <div class="flex bg-[var(--coral)] w-full border-[3px] border-[#172554] rounded-[1rem_2.5rem_1rem_2.5rem] p-6 transition-all hover:-rotate-2 hover:translateX-2 hover:shadow-[5px_5px_0_#172554]">
+                    <span>Image et son</span>
+                </div>
+                <div class="flex bg-[var(--violet)] w-full border-[3px] border-[#172554] rounded-[2.5rem_1rem_2.5rem_1rem] p-6 transition-all hover:-rotate-2 hover:translateX-2 hover:shadow-[5px_5px_0_#172554]">
+                    <span>Création et écriture</span>
+                </div>
+                <div class="flex bg-[var(--turquoise)] w-full border-[3px] border-[#172554] rounded-[1rem_2.5rem_1rem_2.5rem] p-6 transition-all hover:-rotate-2 hover:translateX-2 hover:shadow-[5px_5px_0_#172554]">
+                    <span>Montage et création visuelle</span>
+                </div>
+                <div class="flex bg-[var(--pink)] w-full border-[3px] border-[#172554] rounded-[2.5rem_1rem_2.5rem_1rem] p-6 transition-all hover:-rotate-2 hover:translateX-2 hover:shadow-[5px_5px_0_#172554]">
+                    <span>Qualités personnelles</span>
+                </div>
+            </div>
+        </secion>
+    </main>
+</body>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="text.js"></script>
+<script type="module">
+    import { animate } from "https://cdn.jsdelivr.net/npm/motion@latest/+esm"
+
+    lucide.createIcons();
+    animate(".bubble-test", { opacity: 1, translateX: 40, scale: 1.2 }, { duration: 0.5 })
+    animate(".pcm_badge", { rotate: -2 }, { duration: 0.5 })
+    animate(".border_animate_about", { borderLeftWidth: 12 }, { duration: 0.5 })
+    animate(".shadow_animate_card", {
+        borderWidth: "4px",
+        boxShadow: "5px 5px 0px #172554"
+    }, { duration: 0.2 });
+
+    document.getElementById('about_p1').innerHTML = data.about_p1;
+    document.getElementById('about_p2').innerHTML = data.about_p2;
+</script>
+
+</html>

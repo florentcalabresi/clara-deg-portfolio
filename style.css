@@ -1,0 +1,58 @@
+:root {
+    --ink: #172554;
+    --cream: #fff9ed;
+    --electric: #2454ff;
+    --pink: #f53686;
+    --yellow: #ffd53d;
+    --coral: #ff744c;
+    --violet: #7137d8;
+    --turquoise: #18c7c1;
+    --line: #172554;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-width: 320px;
+    font-family: "DM Sans", sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+}
+
+.wave {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    height: 28px;
+}
+
+.wave span {
+    width: 4px;
+    border-radius: 99px;
+    background: currentColor;
+    animation: wave 1s ease-in-out infinite;
+}
+
+.wave span:nth-child(1),
+.wave span:nth-child(5) {
+    height: 10px;
+}
+
+.wave span:nth-child(2),
+.wave span:nth-child(4) {
+    height: 20px;
+    animation-delay: .12s;
+}
+
+.wave span:nth-child(3) {
+    height: 28px;
+    animation-delay: .24s;
+}
+@keyframes wave { 50% { transform: scaleY(.48); } }

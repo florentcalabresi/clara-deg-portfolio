@@ -1,0 +1,4 @@
+const data = {
+    "about_p1": "Je m’appelle Clara, j’ai 19 ans et je suis actuellement en première année de bachelier en<br />communication à la HEPL. Je suis une personne curieuse, créative et très humaine.<br /> J’aime écrire, découvrir de nouvelles choses et travailler avec d’autres personnes.<br /> L’écriture occupe une place importante dans ma vie : elle m’a beaucoup aidée et me<br /> permet encore aujourd’hui de mettre des mots sur mes idées et mes émotions.<br /> Je m’intéresse particulièrement aux médias, à la création de contenus et à tout ce qui<br /> permet de donner une voix aux personnes et aux projets.",
+    "about_p2": "L’écriture m’a beaucoup aidée à structurer mes idées et à trouver ma manière de<br/> m’exprimer. Mon approche est humaine, attentive et curieuse : je cherche avant tout à<br/> créer des projets qui font place aux personnes et aux récits."
+}
