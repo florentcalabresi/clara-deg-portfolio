@@ -12,14 +12,29 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="flex flex-col">
-    <header class="flex justify-between items-center px-24 border-b-[3px] border-[#172554] h-[56px] w-full">
-        <div class="flex">
+<body class="relative flex flex-col">
+    <div class="fixed z-50 bg-gray-800 text-white w-56 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300"
+        id="sidebar">
+        <!-- Your Sidebar Content -->
+        <div class="p-4">
+            <h1 class="text-2xl font-semibold">Menu</h1>
+            <ul class="mt-4">
+                <li class="mb-2"><a href="#about" class="block hover:text-indigo-400">À propos</a></li>
+                <li class="mb-2"><a href="#projects" class="block hover:text-indigo-400">Projets</a></li>
+                <li class="mb-2"><a href="#gallery" class="block hover:text-indigo-400">Galerie</a></li>
+                <li class="mb-2"><a href="" class="block hover:text-indigo-400">Expériences</a></li>
+                <li class="mb-2"><a href="" class="block hover:text-indigo-400">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <header
+        class="fixed z-40 bg-[var(--cream)] flex justify-between items-center px-12 2xl:px-24 border-b-[3px] border-[#172554] h-[56px] w-full">
+        <div class="flex gap-2 items-center">
+            <button class="flex 2xl:hidden text-gray-500 hover:text-gray-600" id="open-sidebar"><i class="text-[#f53686]" data-lucide="menu"></i></button>
             <span class="focus-ring display text-2xl font-extrabold tracking-tight">CLARA<span
                     class="text-[#f53686]">!</span></span>
-
         </div>
-        <div class="flex">
+        <div class="hidden 2xl:flex">
             <ul class="flex gap-4 font-bold">
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#projects">Projets</a></li>
@@ -29,8 +44,9 @@
             </ul>
         </div>
     </header>
-    <main>
-        <section id="hero" class="relative flex gap-24 items-center bg-[#5170ff]  px-5 py-16 lg:px-8 lg:py-24">
+    <main class="mt-10">
+        <section id="hero"
+            class="relative flex flex-col 2xl:flex-row gap-24 items-center bg-[#5170ff]  px-5 py-16 lg:px-8 lg:py-24 shadow-2xl">
             <!--<div class="absolute inset-0 bg-[radial-gradient(#000000_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none"></div>-->
             <div class="bubble-test absolute -left-10 top-16 h-36 w-36 bg-[var(--yellow)] rounded-full z-1"></div>
             <div class="relative z-10 flex flex-1 gap-6 flex-col">
@@ -56,13 +72,13 @@
                 <div class="flex gap-4">
                     <a href="#about"
                         class="bg-[var(--yellow)] select-none cursor-pointer hover:scale-105 transition-all hover:-rotate-2 gap-2 flex rounded-full w-fit px-6 py-3 font-semibold border-2 border-[#172554] bg-[var(--violet)] shadow-[5px_5px_0_#172554]">
-                        <span>Découvrir mon univers</span>
-                        <i data-lucide="move-down-right"></i>
+                        <span class="whitespace-nowrap overflow-hidden text-ellipsis">Découvrir mon univers</span>
+                        <i class="hidden 2xl:flex" data-lucide="move-down-right"></i>
                     </a>
                     <a href="#"
                         class="bg-white select-none cursor-pointer hover:scale-105 transition-all hover:-rotate-2 gap-2 flex rounded-full w-fit px-6 py-3 font-semibold border-2 border-[#172554] bg-[var(--violet)] shadow-[5px_5px_0_#172554]">
-                        <span>Voir les projets</span>
-                        <i data-lucide="play"></i>
+                        <span class="whitespace-nowrap overflow-hidden text-ellipsis">Voir les projets</span>
+                        <i class="hidden 2xl:flex" data-lucide="play"></i>
                     </a>
                 </div>
             </div>
@@ -88,7 +104,7 @@
                 </div>
             </div>
         </section>
-        <secion id="about" class="relative flex justify-between bg-[var(--cream)] py-24 pr-24">
+        <secion id="about" class="relative flex flex-col  gap-12 2xl:flex-row 2xl:justify-between bg-[var(--cream)] py-24 px-6 2xl:pl-0 2xl:pr-24">
             <div class="flex flex-col pl-8 border_animate_about h-fit border-[var(--turquoise)]">
                 <span class="uppercase w-fit bg-[var(--yellow)] px-4 py-1 rounded-full font-semibold">À propos</span>
                 <h2 class="text-[18px] mt-6 font-[Fraunces] font-bold">Une voix curieuse, attentive et engagée.</h2>
@@ -96,8 +112,7 @@
                     <i data-lucide="sparkles" class="h-6 w-6"></i><span>✦</span><span>✦</span><span>✦</span>
                 </div>
             </div>
-            <div
-                class="flex flex-col gap-4 rounded-[2.5rem_1rem_2.5rem_1rem]  border-[#172554] bg-white !text-white p-6 shadow_animate_card">
+            <div class="flex flex-col w-full 2xl:w-auto gap-4 rounded-[2.5rem_1rem_2.5rem_1rem]  border-[#172554] bg-white !text-white p-6 shadow_animate_card">
                 <span id="about_p1" class="text-[var(--ink)]">ABOUT_P1_VAR</span>
                 <span id="about_p2" class="text-[var(--ink)]">ABOUT_P2_VAR</span>
                 <div class="mt-8 grid gap-3 sm:grid-cols-3">
@@ -122,13 +137,13 @@
                 </div>
             </div>
         </secion>
-        <secion id="skills" class="relative flex flex-col gap-4 px-12 bg-[var(--cream)] py-24 pr-24">
+        <secion id="skills" class="relative flex flex-col gap-4 px-12 bg-[var(--cream)] py-24 px-6 2xl:pr-24">
             <span
                 class="uppercase px-4 w-fit py-1 text-white rounded-full font-semibold bg-[var(--violet)]">Compétences</span>
             <span class="text-[18px] font-bold font-[Fraunces]">Des outils au service des idées.</span>
             <span class="text-[12px]">Des pratiques explorées avec attention, entre expression, technique et travail
                 collectif.</span>
-            <div class="grid grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 2xl:grid-cols-3 gap-4">
                 <div
                     class="flex flex-col gap-2 bg-[var(--yellow)] w-full border-[3px] border-[#172554] rounded-[2.5rem_1rem_2.5rem_1rem] p-6 transition-all hover:-rotate-2 hover:translateX-2 hover:shadow-[5px_5px_0_#172554]">
                     <i data-lucide="radio" class="mb-6 h-8 w-8"></i>
@@ -171,20 +186,6 @@
                 projets</span>
             <div class="flex justify-between">
                 <span class="font-[Fraunces] text-[18px]">Apprendre au contact des médias.</span>
-                <div class="flex flex-wrap gap-2" aria-label="Filtres de projets">
-                    <button
-                        class="filter-btn focus-ring rounded-full border-2 border-[#172554] bg-white px-4 py-2 text-sm font-bold"
-                        type="button" data-filter="all" aria-pressed="true">Tout</button>
-                    <button
-                        class="filter-btn focus-ring rounded-full border-2 border-[#172554] bg-white px-4 py-2 text-sm font-bold"
-                        type="button" data-filter="tv" aria-pressed="false">TV</button>
-                    <button
-                        class="filter-btn focus-ring rounded-full border-2 border-[#172554] bg-white px-4 py-2 text-sm font-bold"
-                        type="button" data-filter="radio" aria-pressed="false">Radio</button>
-                    <button
-                        class="filter-btn focus-ring rounded-full border-2 border-[#172554] bg-white px-4 py-2 text-sm font-bold"
-                        type="button" data-filter="writing" aria-pressed="false">Écriture</button>
-                </div>
             </div>
             <div class="mt-10 grid gap-5 md:grid-cols-2">
                 <article data-template-id="project-scanr" data-category="tv radio writing"
@@ -462,32 +463,47 @@
                         rel="noopener noreferrer" style="background: rgb(255, 213, 61);"><span
                             data-template-id="video-one-label" class="canva-text font-bold"
                             style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/jVuKkNiGrx8?is=JyHenmh14X_j_7Ih" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/jVuKkNiGrx8?is=JyHenmh14X_j_7Ih"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </a>
-                    <a
-                        data-template-id="video-three"
+                    <a data-template-id="video-three"
                         class="canva-card video-card focus-ring pointer-events-auto rounded-[1.5rem_1rem_1.5rem_1rem] border-[3px] border-[#172554] overflow-hidden"
                         href="https://youtu.be/c-a0YK294vs?is=tN_DyUGmANudZk3K" target="_blank"
                         rel="noopener noreferrer" style="background: rgb(245, 54, 134);"><span
                             data-template-id="video-three-label" class="canva-text font-bold"
                             style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/c-a0YK294vs?is=tN_DyUGmANudZk3K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </a> 
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/c-a0YK294vs?is=tN_DyUGmANudZk3K"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </a>
                     <a data-template-id="video-four"
                         class="canva-card video-card focus-ring pointer-events-auto rounded-[1rem_1.5rem_1rem_1.5rem] border-[3px] border-[#172554] overflow-hidden"
                         href="https://youtu.be/Rz5xtEFLox0?is=3pPzjv-T-codgO2n" target="_blank"
                         rel="noopener noreferrer" style="background: rgb(255, 249, 237);"><span
                             data-template-id="video-four-label" class="canva-text font-bold"
                             style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/Rz5xtEFLox0?is=3pPzjv-T-codgO2n" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                    </a> 
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/Rz5xtEFLox0?is=3pPzjv-T-codgO2n"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    </a>
                     <a data-template-id="video-four"
                         class="canva-card video-card focus-ring pointer-events-auto rounded-[1rem_1.5rem_1rem_1.5rem] border-[3px] border-[#172554] overflow-hidden"
                         href="https://youtu.be/tYP2Dd9fa7U?is=UukCYo1iEEfFLJEn" target="_blank"
                         rel="noopener noreferrer" style="background: rgb(255, 249, 237);"><span
                             data-template-id="video-four-label" class="canva-text font-bold"
                             style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/tYP2Dd9fa7U?is=UukCYo1iEEfFLJEn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/tYP2Dd9fa7U?is=UukCYo1iEEfFLJEn"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </a>
 
 
@@ -498,7 +514,11 @@
                         rel="noopener noreferrer" style="background: rgb(255, 249, 237);"><span
                             data-template-id="video-four-label" class="canva-text font-bold"
                             style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/bvIUDdmjVkE?is=OrR-haDn4lJSBlxI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/bvIUDdmjVkE?is=OrR-haDn4lJSBlxI"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </a>
                     <a data-template-id="video-four"
                         class="canva-card video-card focus-ring pointer-events-auto rounded-[1rem_1.5rem_1rem_1.5rem] border-[3px] border-[#172554] overflow-hidden"
@@ -506,7 +526,11 @@
                         rel="noopener noreferrer" style="background: rgb(255, 249, 237);"><span
                             data-template-id="video-four-label" class="canva-text font-bold"
                             style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/cXe7kOOSBcA?is=VFJPcOMdVea81vXD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/cXe7kOOSBcA?is=VFJPcOMdVea81vXD"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </a>
                     <a data-template-id="video-four"
                         class="canva-card video-card focus-ring pointer-events-auto rounded-[1rem_1.5rem_1rem_1.5rem] border-[3px] border-[#172554] overflow-hidden"
@@ -514,7 +538,11 @@
                         rel="noopener noreferrer" style="background: rgb(255, 249, 237);"><span
                             data-template-id="video-four-label" class="canva-text font-bold"
                             style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/nbgkUfEWdZY?is=eAjkRBQhBvWAnUif" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/nbgkUfEWdZY?is=eAjkRBQhBvWAnUif"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </a>
                     <a data-template-id="video-four"
                         class="canva-card video-card focus-ring pointer-events-auto rounded-[1rem_1.5rem_1rem_1.5rem] border-[3px] border-[#172554] overflow-hidden"
@@ -522,7 +550,11 @@
                         rel="noopener noreferrer" style="background: rgb(255, 249, 237);"><span
                             data-template-id="video-four-label" class="canva-text font-bold"
                             style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">
-                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/wUde6mfaK5Q?is=1l5Bd5VC9IkfebS5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            <iframe width="100%" height="315"
+                                src="https://www.youtube.com/embed/wUde6mfaK5Q?is=1l5Bd5VC9IkfebS5"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                     </a>
                 </div>
             </div>
@@ -557,19 +589,6 @@
                         type="application/pdf" width="100%" height="600px" class="border-0" style="border: none;">
                         <p>Votre navigateur ne supporte pas l'aperçu PDF.</p>
                     </object>
-                    <!--<div class="rounded-xl border-2 border-[#172554] bg-[#fff9ed] p-6 shadow-[5px_5px_0_#ffd53d]">
-                        <div class="mb-5 h-3 w-2/5 rounded-full bg-[#f53686]"></div>
-                        <div class="space-y-3">
-                            <div class="h-2 w-full rounded-full bg-[#dbeafe]"></div>
-                            <div class="h-2 w-5/6 rounded-full bg-[#dbeafe]"></div>
-                            <div class="h-2 w-4/6 rounded-full bg-[#dbeafe]"></div>
-                        </div>
-                        <div class="mt-8 grid grid-cols-3 gap-3">
-                            <div class="h-16 rounded-lg bg-[#18c7c1]"></div>
-                            <div class="h-16 rounded-lg bg-[#7137d8]"></div>
-                            <div class="h-16 rounded-lg bg-[#ffd53d]"></div>
-                        </div>
-                    </div>-->
                 </section>
             </div>
         </section>
@@ -588,6 +607,30 @@
         borderWidth: "4px",
         boxShadow: "5px 5px 0px #172554"
     }, { duration: 0.2 });
+
+    const sidebar = document.getElementById('sidebar');
+    const openSidebarButton = document.getElementById('open-sidebar');
+
+    openSidebarButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sidebar.classList.toggle('-translate-x-full');
+    });
+
+    const sidebarLinks = document.querySelectorAll('#sidebar a');
+
+    // Exemple : itérer dessus
+    sidebarLinks.forEach(link => {
+        link.addEventListener('clicl', (e) => {
+            e.stopPropagation();
+            sidebar.classList.toggle('-translate-x-full');
+        })
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!sidebar.contains(e.target) && !openSidebarButton.contains(e.target)) {
+            sidebar.classList.add('-translate-x-full');
+        }
+    });
 
     document.getElementById('about_p1').innerHTML = data.about_p1;
     document.getElementById('about_p2').innerHTML = data.about_p2;
