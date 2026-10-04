@@ -12,6 +12,7 @@
 
 * {
     box-sizing: border-box;
+    font-family: 'DM Sans';
 }
 
 html {
@@ -56,3 +57,5 @@ body {
     animation-delay: .24s;
 }
 @keyframes wave { 50% { transform: scaleY(.48); } }
+
+.paper-grid { background-image: linear-gradient(rgba(23,37,84,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(23,37,84,.07) 1px, transparent 1px); background-size: 28px 28px; }
