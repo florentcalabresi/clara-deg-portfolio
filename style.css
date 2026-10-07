@@ -57,5 +57,5 @@ body {
     animation-delay: .24s;
 }
 @keyframes wave { 50% { transform: scaleY(.48); } }
-
+.hero-dots { background-image: radial-gradient(rgba(255,255,255,.65) 1.2px, transparent 1.2px); background-size: 14px 14px; }
 .paper-grid { background-image: linear-gradient(rgba(23,37,84,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(23,37,84,.07) 1px, transparent 1px); background-size: 28px 28px; }

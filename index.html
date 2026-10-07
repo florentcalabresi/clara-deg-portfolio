@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clara Degrange</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,700;9..144,800&amp;display=swap"
         rel="stylesheet">
@@ -22,31 +23,36 @@
                 <li class="mb-2"><a href="#about" class="block hover:text-indigo-400">À propos</a></li>
                 <li class="mb-2"><a href="#projects" class="block hover:text-indigo-400">Projets</a></li>
                 <li class="mb-2"><a href="#gallery" class="block hover:text-indigo-400">Galerie</a></li>
-                <li class="mb-2"><a href="" class="block hover:text-indigo-400">Expériences</a></li>
-                <li class="mb-2"><a href="" class="block hover:text-indigo-400">Contact</a></li>
+                <li class="mb-2"><a href="#videos" class="block hover:text-indigo-400">Expériences</a></li>
+                <li class="mb-2"><a href="#contact" class="block hover:text-indigo-400">Contact</a></li>
             </ul>
         </div>
     </div>
     <header
-        class="fixed z-40 bg-[var(--cream)] flex justify-between items-center px-12 2xl:px-24 border-b-[3px] border-[#172554] h-[56px] w-full">
+        class="fixed z-40 bg-[var(--cream)] flex justify-between items-center px-12 lg:px-24 border-b-[3px] border-[#172554] h-[56px] w-full">
         <div class="flex gap-2 items-center">
-            <button class="flex 2xl:hidden text-gray-500 hover:text-gray-600" id="open-sidebar"><i class="text-[#f53686]" data-lucide="menu"></i></button>
+            <button class="flex lg:hidden text-gray-500 hover:text-gray-600" id="open-sidebar"><i class="text-[#f53686]"
+                    data-lucide="menu"></i></button>
             <span class="focus-ring display text-2xl font-extrabold tracking-tight">CLARA<span
                     class="text-[#f53686]">!</span></span>
         </div>
-        <div class="hidden 2xl:flex">
+        <div class="hidden lg:flex">
             <ul class="flex gap-4 font-bold">
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="#gallery">Galerie</a></li>
-                <li><a href="">Expériences</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#videos">Expériences</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </header>
     <main class="mt-10">
         <section id="hero"
-            class="relative flex flex-col 2xl:flex-row gap-24 items-center bg-[#5170ff]  px-5 py-16 lg:px-8 lg:py-24 shadow-2xl">
+            class="relative flex flex-col lg:flex-row gap-12 lg:gap-24 items-center bg-[#5170ff]  px-5 py-16 lg:px-8 lg:py-24 shadow-2xl">
+            <div class="hero-dots absolute inset-y-0 right-0 w-1/3 opacity-70"></div>
+            <div class="absolute -left-12 top-24 h-36 w-36 rounded-full bg-[#ffd53d]"></div>
+            <div class="absolute right-[7%] top-12 hidden h-20 w-20 rotate-12 rounded-[1.6rem] border-[5px] border-[#172554] bg-[#f53686] lg:block"></div>
+            <div class="absolute bottom-12 right-[13%] hidden h-24 w-24 rounded-full border-[8px] border-[#18c7c1] lg:block"></div>
             <!--<div class="absolute inset-0 bg-[radial-gradient(#000000_1px,transparent_1px)] [background-size:16px_16px] opacity-20 pointer-events-none"></div>-->
             <div class="bubble-test absolute -left-10 top-16 h-36 w-36 bg-[var(--yellow)] rounded-full z-1"></div>
             <div class="relative z-10 flex flex-1 gap-6 flex-col">
@@ -68,17 +74,18 @@
                     contenus</span>
                 <span class="text-6 text-white w-34">J’aime raconter, créer et donner vie aux idées. À travers la
                     communication et les médias, je<br />cherche à apprendre, à rencontrer les autres et à construire
-                    des projets qui ont du sens.</span>
-                <div class="flex gap-4">
+                    des projets qui ont du sens.
+                </span>
+                <div class="flex flex-col lg:flex-row items-center gap-4">
                     <a href="#about"
                         class="bg-[var(--yellow)] select-none cursor-pointer hover:scale-105 transition-all hover:-rotate-2 gap-2 flex rounded-full w-fit px-6 py-3 font-semibold border-2 border-[#172554] bg-[var(--violet)] shadow-[5px_5px_0_#172554]">
                         <span class="whitespace-nowrap overflow-hidden text-ellipsis">Découvrir mon univers</span>
-                        <i class="hidden 2xl:flex" data-lucide="move-down-right"></i>
+                        <i class="hidden lg:flex" data-lucide="move-down-right"></i>
                     </a>
-                    <a href="#"
+                    <a href="#projects"
                         class="bg-white select-none cursor-pointer hover:scale-105 transition-all hover:-rotate-2 gap-2 flex rounded-full w-fit px-6 py-3 font-semibold border-2 border-[#172554] bg-[var(--violet)] shadow-[5px_5px_0_#172554]">
                         <span class="whitespace-nowrap overflow-hidden text-ellipsis">Voir les projets</span>
-                        <i class="hidden 2xl:flex" data-lucide="play"></i>
+                        <i class="hidden lg:flex" data-lucide="play"></i>
                     </a>
                 </div>
             </div>
@@ -103,8 +110,30 @@
                     </div>
                 </div>
             </div>
+            <div class="absolute -bottom-12 z-40 w-full h-fit flex gap-8 justify-center left-1/2 right-1/2"
+                style="transform: translate(-50%, -50%);">
+                <a href="https://www.instagram.com/clara.degr?stkn=NjFtenJycTFndjRh&utm_source=qr" target="_blank" class="flex cursor-pointer items-center gap-2 rounded-[2.5rem_1rem_2.5rem_1rem] border-[#172554] !text-white px-4 py-2 shadow_animate_card hover:-rotate-4 transition-all hover:scale-110"
+                    style="background: #FE2C55;
+                    background: linear-gradient(
+                        to right,
+                        #833ab4,#fd1d1d,#fcb045
+                    );">
+                    <i class="fa-brands fa-instagram text-2xl"></i>
+                    <span class="hidden md:flex">Instagram</span>
+                </a>
+                <a href="https://www.tiktok.com/@ileauuu?_r=1&_t=ZG-9AL0QKHfE8m" target="_blank" class="flex cursor-pointer items-center gap-2 rounded-[2.5rem_1rem_2.5rem_1rem] border-[#172554] bg-[var(--violet)] !text-white px-4 py-2 shadow_animate_card hover:-rotate-4 transition-all hover:scale-110"
+                    style="background: #FE2C55;">
+                    <i class="fa-brands fa-tiktok text-2xl"></i>
+                    <span class="hidden md:flex">Tiktok</span>
+                </a>
+                <a href="https://www.linkedin.com/in/clara-degrange-01336b330" target="_blank" class="flex cursor-pointer items-center gap-2 rounded-[2.5rem_1rem_2.5rem_1rem] border-[#172554] bg-[#007dbb] !text-white px-4 py-2 shadow_animate_card hover:-rotate-4 transition-all hover:scale-110">
+                    <i class="fa-brands fa-linkedin text-2xl"></i>
+                    <span class="hidden md:flex">Linkedin</span>
+                </a>
+            </div>
         </section>
-        <secion id="about" class="relative flex flex-col  gap-12 2xl:flex-row 2xl:justify-between bg-[var(--cream)] py-24 px-6 2xl:pl-0 2xl:pr-24">
+        <secion id="about"
+            class="relative flex flex-col  gap-12 lg:flex-row lg:justify-between bg-[var(--cream)] py-24 px-6 lg:pl-0 lg:pr-24">
             <div class="flex flex-col pl-8 border_animate_about h-fit border-[var(--turquoise)]">
                 <span class="uppercase w-fit bg-[var(--yellow)] px-4 py-1 rounded-full font-semibold">À propos</span>
                 <h2 class="text-[18px] mt-6 font-[Fraunces] font-bold">Une voix curieuse, attentive et engagée.</h2>
@@ -112,7 +141,8 @@
                     <i data-lucide="sparkles" class="h-6 w-6"></i><span>✦</span><span>✦</span><span>✦</span>
                 </div>
             </div>
-            <div class="flex flex-col w-full 2xl:w-auto gap-4 rounded-[2.5rem_1rem_2.5rem_1rem]  border-[#172554] bg-white !text-white p-6 shadow_animate_card">
+            <div
+                class="flex flex-col w-full lg:w-auto gap-4 rounded-[2.5rem_1rem_2.5rem_1rem]  border-[#172554] bg-white !text-white p-6 shadow_animate_card">
                 <span id="about_p1" class="text-[var(--ink)]">ABOUT_P1_VAR</span>
                 <span id="about_p2" class="text-[var(--ink)]">ABOUT_P2_VAR</span>
                 <div class="mt-8 grid gap-3 sm:grid-cols-3">
@@ -137,13 +167,13 @@
                 </div>
             </div>
         </secion>
-        <secion id="skills" class="relative flex flex-col gap-4 px-12 bg-[var(--cream)] py-24 px-6 2xl:pr-24">
+        <secion id="skills" class="relative flex flex-col gap-4 px-12 bg-[var(--cream)] py-24 px-6 lg:pr-24">
             <span
                 class="uppercase px-4 w-fit py-1 text-white rounded-full font-semibold bg-[var(--violet)]">Compétences</span>
             <span class="text-[18px] font-bold font-[Fraunces]">Des outils au service des idées.</span>
             <span class="text-[12px]">Des pratiques explorées avec attention, entre expression, technique et travail
                 collectif.</span>
-            <div class="grid grid-cols-1 2xl:grid-cols-3 gap-4">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 <div
                     class="flex flex-col gap-2 bg-[var(--yellow)] w-full border-[3px] border-[#172554] rounded-[2.5rem_1rem_2.5rem_1rem] p-6 transition-all hover:-rotate-2 hover:translateX-2 hover:shadow-[5px_5px_0_#172554]">
                     <i data-lucide="radio" class="mb-6 h-8 w-8"></i>
@@ -323,7 +353,7 @@
                         </div>
                         <div
                             class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-500">
-                            <span>Studio Scan-R</span>
+                            <span>Equinoxe FM</span>
                             <i data-lucide="mic" class="h-4 w-4 text-[var(--turquoise)]"></i>
                         </div>
                     </div>
@@ -365,9 +395,8 @@
                 <article
                     class="gallery-card snap-start shrink-0 w-[290px] sm:w-[340px] md:w-[380px] flex flex-col rounded-[1rem_2rem_1rem_2rem] overflow-hidden border-[3px] border-[#172554] bg-white shadow-[6px_6px_0_#ffd53d] group transition-all duration-300 hover:-translate-y-2 hover:shadow-[8px_8px_0_#18c7c1]">
                     <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
-                            alt="Photo de groupe d'une équipe dans un espace créatif"
-                            class="gallery-img h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        <img id="adventure_diap" alt="Photo de groupe d'une équipe dans un espace créatif"
+                            class="gallery-img h-full w-full object-cover group-hover:scale-105 transition-all duration-500 ease-in-out"
                             loading="lazy" />
                         <span
                             class="absolute top-3 left-3 rounded-full bg-[#ffd53d] text-[#172554] border-2 border-[#172554] px-3 py-0.5 text-xs font-bold uppercase tracking-wider shadow-[2px_2px_0_#172554]">
@@ -390,7 +419,7 @@
                 <article
                     class="gallery-card snap-start shrink-0 w-[290px] sm:w-[340px] md:w-[380px] flex flex-col rounded-[1rem_2rem_1rem_2rem] overflow-hidden border-[3px] border-[#172554] bg-white shadow-[6px_6px_0_#18c7c1] group transition-all duration-300 hover:-translate-y-2 hover:shadow-[8px_8px_0_#ffd53d]">
                     <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900">
-                        <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=800&q=80"
+                        <img src="assets/d736e7fb-9481-474c-8846-5d83f549190e.jpg"
                             alt="Régie de production avec plusieurs écrans"
                             class="gallery-img h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
                             loading="lazy" />
@@ -416,9 +445,10 @@
                 <article
                     class="gallery-card snap-start shrink-0 w-[290px] sm:w-[340px] md:w-[380px] flex flex-col rounded-[2rem_1rem_2rem_1rem] overflow-hidden border-[3px] border-[#172554] bg-white shadow-[6px_6px_0_#ffd53d] group transition-all duration-300 hover:-translate-y-2 hover:shadow-[8px_8px_0_#18c7c1]">
                     <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900">
-                        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
+                        <img id="coulisse_diap"
+                            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=800&q=80"
                             alt="Coulisses d'un plateau de télévision en tournage"
-                            class="gallery-img h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            class="gallery-img h-full w-full object-cover group-hover:scale-105 transition-all duration-500 ease-in-out"
                             loading="lazy" />
                         <span
                             class="absolute top-3 left-3 rounded-full bg-[#ffd53d] text-[#172554] border-2 border-[#172554] px-3 py-0.5 text-xs font-bold uppercase tracking-wider shadow-[2px_2px_0_#172554]">
@@ -559,7 +589,101 @@
                 </div>
             </div>
         </section>
-
+        <section data-template-id="personal-section" class="canva-section px-5 py-16 lg:px-8"
+            style="background: rgb(255, 249, 237);">
+            <div class="mx-auto max-w-7xl">
+                <p data-template-id="personal-eyebrow" class="canva-text text-sm font-bold uppercase tracking-[.16em]"
+                    style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">Un peu plus
+                    sur moi</p>
+                <h2 data-template-id="personal-title"
+                    class="canva-text display mt-4 text-4xl font-extrabold leading-[1.05] sm:text-5xl"
+                    style="color: rgb(23, 37, 84); font-weight: 800; font-style: normal; font-size: 24px;">Ce qui me
+                    ressemble</h2>
+                <p data-template-id="personal-text" class="canva-text mt-6 max-w-3xl text-lg leading-relaxed"
+                    style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;">Je suis
+                    créative, curieuse et j’aime avancer en équipe. Je sais que j’ai encore beaucoup à apprendre, mais
+                    c’est justement ce qui me motive. Chaque projet est pour moi une occasion de progresser, de tester
+                    de nouvelles idées et de mieux comprendre le monde des médias.</p>
+            </div>
+        </section>
+        <section data-template-id="values-section" class="canva-section px-5 py-16 lg:px-8"
+            style="background: rgb(245, 54, 134);">
+            <div class="mx-auto max-w-7xl">
+                <p data-template-id="values-eyebrow" class="canva-text text-sm font-bold uppercase tracking-[.16em]"
+                    style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">Ce qui
+                    m’anime</p>
+                <h2 data-template-id="values-title"
+                    class="canva-text display mt-4 text-4xl font-extrabold leading-[1.05] sm:text-5xl"
+                    style="color: rgb(23, 37, 84); font-weight: 800; font-style: normal; font-size: 24px;">Créer avec
+                    les autres, rester en mouvement.</h2>
+                <div class="mt-8 flex flex-wrap gap-3"><span data-template-id="value-one"
+                        class="canva-tag rounded-full border-2 border-[#172554] bg-[#fff9ed] px-5 py-3 font-bold"
+                        style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">Je crée
+                        avec curiosité.</span><span data-template-id="value-two"
+                        class="canva-tag rounded-full border-2 border-[#172554] bg-[#18c7c1] px-5 py-3 font-bold"
+                        style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">J’écoute
+                        avec attention.</span><span data-template-id="value-three"
+                        class="canva-tag rounded-full border-2 border-[#172554] bg-[#7137d8] px-5 py-3 font-bold text-white"
+                        style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Je
+                        travaille avec les autres.</span><span data-template-id="value-four"
+                        class="canva-tag rounded-full border-2 border-[#172554] bg-[#ffd53d] px-5 py-3 font-bold"
+                        style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">J’apprends
+                        chaque jour.</span><span data-template-id="value-five"
+                        class="canva-tag rounded-full border-2 border-[#172554] bg-[#fff9ed] px-5 py-3 font-bold"
+                        style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">Je
+                        m’exprime avec sincérité.</span>
+                </div>
+            </div>
+        </section>
+        <section id="experiences" data-template-id="experiences-section"
+            class="canva-section paper-grid px-5 py-20 lg:px-8" style="background: rgb(255, 249, 237);">
+            <div class="mx-auto max-w-7xl">
+                <p data-template-id="experiences-eyebrow"
+                    class="canva-text inline-block rounded-full bg-[#f53686] px-3 py-1 text-sm font-bold uppercase tracking-[.12em] text-white"
+                    style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">
+                    Expériences médias</p>
+                <h2 data-template-id="experiences-title"
+                    class="canva-text display mt-5 text-4xl font-extrabold leading-[1.02] sm:text-5xl"
+                    style="color: rgb(23, 37, 84); font-weight: 800; font-style: normal; font-size: 24px;">Au cœur des
+                    médias et des coulisses.</h2>
+                <p data-template-id="experiences-text" class="canva-text mt-5 max-w-3xl text-lg leading-relaxed"
+                    style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;">Je construis
+                    mon parcours en communication avec curiosité, polyvalence et ambition. J’aime découvrir les régies,
+                    les plateaux, les écrans, les tournages et tout le travail collectif qui donne vie aux projets.</p>
+                <div class="mt-8 grid gap-5 md:grid-cols-1">
+                    <article data-template-id="experience-regie"
+                        class="canva-card rounded-[2rem_1rem] border-[3px] border-[#172554] bg-white p-7"
+                        style="background: rgb(255, 255, 255);">
+                        <h3 data-template-id="experience-regie-title" class="canva-text text-2xl font-bold"
+                            style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 24px;">Une
+                            expérience concrète</h3>
+                        <p data-template-id="experience-regie-text" class="canva-text mt-3 leading-relaxed"
+                            style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;">Je
+                            participe à des émissions TV et radio, à des tournages et à des projets de rédaction auprès
+                            de Qu4tre, Védia et EquinoxFm. Ces expériences m’apprennent à préparer du contenu, prendre
+                            la parole et travailler en équipe.</p>
+                        <div class="mt-6 flex flex-wrap gap-3">
+                            <a data-template-id="instagram-one"
+                                class="canva-button focus-ring pointer-events-auto rounded-full border-2 border-[#172554] bg-[#f53686] px-4 py-2 font-bold text-white"
+                                href="https://www.instagram.com/reel/DdYYfYOjfEy/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA=="
+                                target="_blank" rel="noopener noreferrer"
+                                style="background: rgb(245, 54, 134); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Voir
+                                ma présentation au sein de la rédaction</a><a data-template-id="instagram-two"
+                                class="canva-button focus-ring pointer-events-auto rounded-full border-2 border-[#172554] bg-[#ffd53d] px-4 py-2 font-bold"
+                                href="https://www.instagram.com/reel/DWGbZbpNunp/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA=="
+                                target="_blank" rel="noopener noreferrer"
+                                style="background: rgb(255, 213, 61); color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">Découvrir
+                                une autre participation</a><a data-template-id="instagram-three"
+                                class="canva-button focus-ring pointer-events-auto rounded-full border-2 border-[#172554] bg-[#18c7c1] px-4 py-2 font-bold"
+                                href="https://www.instagram.com/reel/DZxelj8tIIQ/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA=="
+                                target="_blank" rel="noopener noreferrer"
+                                style="background: rgb(24, 199, 193); color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">Voir
+                                un autre extrait</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
         <section id="cv" data-template-id="cv-section" class="canva-section px-5 py-20 lg:px-8"
             style="background: rgb(255, 249, 237);">
             <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
@@ -592,6 +716,75 @@
                 </section>
             </div>
         </section>
+        <section id="contact" class="px-5 py-20 lg:px-8">
+            <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr]">
+                <div class="reveal">
+                    <p data-template-id="contact-eyebrow"
+                        class="canva-text inline-block rounded-full bg-[#ffd53d] px-3 py-1 text-sm font-bold uppercase tracking-[.12em]"
+                        style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">Contact
+                    </p>
+                    <h2 data-template-id="contact-title"
+                        class="canva-text display mt-5 text-4xl font-extrabold leading-[1.02] sm:text-5xl"
+                        style="color: rgb(23, 37, 84); font-weight: 800; font-style: normal; font-size: 24px;">Une idée,
+                        un stage, une collaboration ?</h2>
+                    <p data-template-id="contact-text" class="canva-text mt-5 max-w-md text-lg leading-relaxed"
+                        style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;">Vous
+                        souhaitez en savoir plus sur mon parcours, me proposer un stage ou échanger autour d’un projet ?
+                        Je serais ravie de vous lire.</p>
+                    <div class="mt-8 flex items-center gap-3 text-[#f53686]" aria-hidden="true">
+                        <i data-lucide="message-circle" class="h-8 w-8"></i><span class="text-3xl">✦</span>
+                    </div>
+                </div>
+                <form action="https://formspree.io/f/xvkzzalr" method="POST"
+                    class="reveal sticker rounded-[2.5rem_1rem_2.5rem_1rem] border-[3px] border-[#172554] bg-[#172554] p-6 text-white sm:p-9">
+                    <div class="grid gap-5 sm:grid-cols-2">
+                        <div>
+                            <label class="canva-text mb-2 block text-sm font-bold" for="contact-name"
+                                style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Nom</label><input
+                                id="contact-name" name="name" required=""
+                                class="focus-ring w-full rounded-xl border-2 border-white/40 bg-white/10 px-4 py-3 text-white"
+                                type="text">
+                        </div>
+                        <div>
+                            <label class="canva-text mb-2 block text-sm font-bold" for="contact-email"
+                                style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Adresse
+                                e-mail
+                            </label>
+                            <input id="contact-email" name="email" required=""
+                                class="focus-ring w-full rounded-xl border-2 border-white/40 bg-white/10 px-4 py-3 text-white"
+                                type="email">
+                        </div>
+                    </div>
+                    <div class="mt-5">
+                        <label class="canva-text mb-2 block text-sm font-bold" for="contact-subject"
+                            style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Objet</label><input
+                            id="contact-subject" name="subject" required=""
+                            class="focus-ring w-full rounded-xl border-2 border-white/40 bg-white/10 px-4 py-3 text-white"
+                            type="text">
+                    </div>
+                    <div class="mt-5">
+                        <label class="canva-text mb-2 block text-sm font-bold" for="contact-message"
+                            style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Message</label><textarea
+                            id="contact-message" name="message" required="" rows="5"
+                            class="focus-ring w-full resize-y rounded-xl border-2 border-white/40 bg-white/10 px-4 py-3 text-white"></textarea>
+                    </div>
+                    <p class="mt-4 hidden rounded-xl bg-[#f53686] p-3 text-sm font-bold text-white" role="alert"></p>
+                    <p class="canva-banner mt-4 hidden rounded-xl p-4 text-sm font-semibold" role="status"
+                        style="background: rgb(209, 250, 229); color: rgb(6, 78, 59); font-weight: 600; font-style: normal; font-size: 16px;">
+                        Merci, votre message a bien été enregistré. Clara pourra le consulter prochainement.
+                    </p>
+                    <button
+                        class="canva-button focus-ring mt-6 inline-flex items-center gap-2 rounded-full border-2 border-[#172554] px-6 py-3 font-bold"
+                        type="submit" style="background: rgb(255, 213, 61); color: rgb(23, 37, 84);">
+                        <span
+                            style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">Envoyer
+                            le message
+                        </span>
+                        <i data-lucide="send" class="h-4 w-4"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
     </main>
 </body>
 <script src="https://unpkg.com/lucide@latest"></script>
@@ -620,10 +813,10 @@
 
     // Exemple : itérer dessus
     sidebarLinks.forEach(link => {
-        link.addEventListener('clicl', (e) => {
+        link.addEventListener('click', (e) => {
             e.stopPropagation();
             sidebar.classList.toggle('-translate-x-full');
-        })
+        });
     });
 
     document.addEventListener('click', (e) => {
@@ -634,6 +827,121 @@
 
     document.getElementById('about_p1').innerHTML = data.about_p1;
     document.getElementById('about_p2').innerHTML = data.about_p2;
+
+    /**
+     * Initialise un diaporama d'images réutilisable avec effet de fondu (fade) et barre de progression.
+     * @param {string|HTMLImageElement} target - ID de l'élément, sélecteur CSS ou élément DOM <img>.
+     * @param {string[]} images - Tableau des URLs des images à faire défiler.
+     * @param {Object} [options] - Options facultatives (interval, fadeDuration, startIndex, barColor, showProgressBar).
+     * @returns {Object} Contrôleur du diaporama avec méthode stop().
+     */
+    function createFadeSlideshow(target, images, options = {}) {
+        const imgEl = typeof target === 'string'
+            ? (document.getElementById(target) || document.querySelector(target))
+            : target;
+
+        if (!imgEl || !Array.isArray(images) || images.length <= 1) return null;
+
+        const interval = options.interval ?? 10000;
+        const fadeDuration = options.fadeDuration ?? 500;
+        const barColor = options.barColor || '#ffd53d';
+        const showProgressBar = options.showProgressBar ?? true;
+        let currentIndex = options.startIndex ?? 0;
+
+        // Transition d'opacité fluide appliquée directement sur l'image
+        imgEl.style.transition = `opacity ${fadeDuration}ms ease-in-out`;
+        imgEl.src = images[currentIndex];
+
+        // Création ou récupération de la barre de progression sur le conteneur de la carte
+        let progressBar = null;
+        const parent = imgEl.parentElement;
+        if (parent && showProgressBar) {
+            let progressTrack = parent.querySelector('.slideshow-progress-track');
+            if (!progressTrack) {
+                progressTrack = document.createElement('div');
+                progressTrack.className = 'slideshow-progress-track absolute bottom-0 inset-x-0 h-1.5 bg-black/40 z-10 overflow-hidden pointer-events-none';
+                progressBar = document.createElement('div');
+                progressBar.className = 'slideshow-progress-bar h-full w-0 rounded-r-full shadow-sm';
+                progressBar.style.backgroundColor = barColor;
+                progressTrack.appendChild(progressBar);
+                parent.appendChild(progressTrack);
+            } else {
+                progressBar = progressTrack.querySelector('.slideshow-progress-bar');
+            }
+        }
+
+        // Préchargement en mémoire cache
+        images.forEach(url => {
+            const preloader = new Image();
+            preloader.src = url;
+        });
+
+        // Animation de la barre de progression de 0% à 100%
+        const startProgressBar = (duration) => {
+            if (!progressBar) return;
+            progressBar.style.transition = 'none';
+            progressBar.style.width = '0%';
+            void progressBar.offsetWidth; // Force reflow pour appliquer immédiatement le 0%
+            progressBar.style.transition = `width ${duration}ms linear`;
+            progressBar.style.width = '100%';
+        };
+
+        let timer = null;
+        let fadeTimer = null;
+
+        const cycle = () => {
+            // Lancer l'animation de la barre sur toute la durée de l'intervalle
+            startProgressBar(interval);
+
+            timer = setTimeout(() => {
+                // Fondu sortant (fade out)
+                imgEl.style.opacity = '0';
+
+                fadeTimer = setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    imgEl.src = images[currentIndex];
+
+                    const onReady = () => {
+                        imgEl.style.opacity = '1';
+                    };
+
+                    if (imgEl.complete) {
+                        onReady();
+                    } else {
+                        imgEl.onload = onReady;
+                    }
+
+                    // Lancer le cycle suivant
+                    cycle();
+                }, fadeDuration);
+            }, interval);
+        };
+
+        // Lancement initial
+        cycle();
+
+        return {
+            stop: () => {
+                clearTimeout(timer);
+                clearTimeout(fadeTimer);
+                if (progressBar) progressBar.style.width = '0%';
+            }
+        };
+    }
+
+    // Utilisation pour les diaporamas des cartes
+    createFadeSlideshow('coulisse_diap', [
+        'assets/20A3565C-661E-4D60-B6F0-0118C4DBC7FB.jpg',
+        'assets/IMG_3733.jpg'
+    ], { interval: 10000, fadeDuration: 500, barColor: '#ffd53d' });
+
+    createFadeSlideshow('adventure_diap', [
+        'assets/IMG_3521.jpg',
+        'assets/IMG_1555.jpg',
+        'assets/IMG_1551.jpg',
+        'assets/e7020eba-fe65-4e9a-8bd5-1d59326d592c.jpg',
+    ], { interval: 10000, fadeDuration: 500, barColor: '#ffd53d' });
+
 
     // === GESTION DU CAROUSEL GALERIE ===
     const carousel = document.getElementById('gallery-carousel');
