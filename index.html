@@ -234,17 +234,53 @@
                 </a>
             </div>
         </section>
-        <secion id="about"
-            class="relative flex flex-col  gap-12 lg:flex-row lg:justify-between bg-[var(--cream)] py-24 px-6 lg:pl-0 lg:pr-24">
-            <div class="flex flex-col pl-8 border_animate_about h-fit border-[var(--turquoise)]">
-                <span class="uppercase w-fit bg-[var(--yellow)] px-4 py-1 rounded-full font-semibold">À propos</span>
-                <h2 class="text-[18px] mt-6 font-[Fraunces] font-bold">Une voix curieuse, attentive et engagée.</h2>
-                <div class="mt-8 flex items-center gap-3 font-bold text-[#f53686]">
-                    <i data-lucide="sparkles" class="h-6 w-6"></i><span>✦</span><span>✦</span><span>✦</span>
+        <section id="about"
+            class="relative flex flex-col gap-10 lg:flex-row lg:items-center lg:justify-between bg-[var(--cream)] py-20 lg:py-24 px-6 lg:pl-0 lg:pr-12 xl:pr-12">
+            <div class="flex flex-col lg:max-w-xs xl:max-w-sm shrink-0">
+                <div class="flex flex-col pl-8 border_animate_about h-fit border-[var(--turquoise)]">
+                    <span class="uppercase w-fit bg-[var(--yellow)] px-4 py-1 rounded-full lg:text-xl font-semibold">À
+                        propos</span>
+                    <h2 class="lg:text-2xl mt-6 font-[Fraunces] font-bold">Une voix curieuse, attentive et engagée.</h2>
+                    <div class="mt-8 flex items-center gap-3 font-bold text-[#f53686]">
+                        <i data-lucide="sparkles" class="h-6 w-6"></i><span>✦</span><span>✦</span><span>✦</span>
+                    </div>
                 </div>
             </div>
+
+            <!-- Photo épinglée / Polaroïd (D-A néo-brutaliste pop) -->
+            <div class="relative flex justify-center items-center my-4 lg:my-0 shrink-0">
+                <div id="about-pinned-card"
+                    class="relative w-64 sm:w-72 rounded-[1.5rem_1rem_1.5rem_1rem] bg-white p-3.5 pb-4 border-[3px] border-[#172554] shadow-[6px_6px_0_#172554] -rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-300 select-none group cursor-pointer">
+                    <!-- Épingle punaise & scotch adhésif au sommet -->
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20 flex items-center justify-center">
+                        <div class="h-6 px-3 bg-[#ffd53d] border-2 border-[#172554] shadow-[2px_2px_0_#172554] -rotate-2 rounded-sm flex items-center justify-center">
+                            <span class="text-[10px] font-extrabold uppercase tracking-widest text-[#172554]">CLARA ✦</span>
+                        </div>
+                        <div class="absolute -top-1.5 w-4 h-4 rounded-full bg-[#f53686] border-2 border-[#172554] shadow-[1px_1px_0_#172554] flex items-center justify-center">
+                            <div class="w-1 h-1 rounded-full bg-white"></div>
+                        </div>
+                    </div>
+
+                    <!-- Cadre de l'image -->
+                    <div class="overflow-hidden rounded-xl border-2 border-[#172554] bg-[#172554] aspect-[4/3]">
+                        <img src="assets/about_picture.png"
+                            alt="Clara Degrange"
+                            class="h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy" />
+                    </div>
+
+                    <!-- Légende polaroïd -->
+                    <div class="mt-3 flex items-center justify-between px-1">
+                        <span class="font-[Fraunces] italic font-bold text-sm text-[#172554]">" Et si on suivait la même trajectoire que Buzz ? "</span>
+                        <div class="flex gap-1 text-[#f53686] text-xs font-bold" aria-hidden="true">
+                            <span>✦</span><span>✦</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div
-                class="flex flex-col w-full lg:w-auto gap-4 lg:max-w-[42rem] rounded-[2.5rem_1rem_2.5rem_1rem] border-[#172554] bg-white !text-white p-6 shadow_animate_card">
+                class="flex flex-col w-full lg:w-auto gap-4 lg:max-w-[34rem] xl:max-w-[38rem] rounded-[2.5rem_1rem_2.5rem_1rem] border-[#172554] bg-white !text-white p-6 h-fit shadow_animate_card">
                 <span id="about_p1" class="text-[var(--ink)]"></span>
                 <!--<span id="about_p2" class="text-[var(--ink)]"></span>-->
                 <div class="mt-8 grid gap-3 sm:grid-cols-3">
@@ -268,12 +304,12 @@
                     </div>
                 </div>
             </div>
-        </secion>
-        <secion id="skills" class="relative flex flex-col gap-4 px-12 bg-[var(--cream)] py-24 px-6 lg:pr-24">
+        </section>
+        <section id="skills" class="relative flex flex-col gap-4 px-12 bg-[var(--cream)] py-24 px-6 lg:pr-24">
             <span
                 class="uppercase px-4 w-fit py-1 text-white rounded-full font-semibold bg-[var(--violet)]">Compétences</span>
-            <span class="text-[18px] font-bold font-[Fraunces]">Des outils au service des idées.</span>
-            <span class="text-[12px]">Des pratiques explorées avec attention, entre expression, technique et travail
+            <span class="text-[24px] font-bold font-[Fraunces]">Des outils au service des idées.</span>
+            <span class="text-[20px]">Des pratiques explorées avec attention, entre expression, technique et travail
                 collectif.</span>
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
                 <div
@@ -581,6 +617,32 @@
             <div id="carousel-dots" class="mt-4 flex items-center justify-center gap-2"></div>
         </section>
 
+        <section data-template-id="values-section" class="canva-section px-5 py-8 lg:px-8"
+            style="background: rgb(24, 199, 193);">
+            <div class="mx-auto flex flex-col lg:flex-row justify-between items-center max-w-7xl">
+                <div class="flex items-center gap-4">
+                    <i data-lucide="mail-badge" class="w-12 h-12"></i>
+                    <div class="flex flex-col">
+                        <p data-template-id="values-eyebrow"
+                            class="canva-text text-sm font-bold uppercase tracking-[.16em]"
+                            style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">
+                            Lettre de
+                            recommendation</p>
+                        <h2 data-template-id="values-title"
+                            class="canva-text display text-4xl font-extrabold leading-[1.05] sm:text-5xl"
+                            style="color: rgb(23, 37, 84); font-weight: 800; font-style: normal; font-size: 24px;">
+                            Écris par Jonas Grétry, Directeur de l’ASBL Scan-R
+                        </h2>
+                    </div>
+                </div>
+                <a class="canva-button hover:scale-110 transition-all focus-ring flex items-center pointer-events-auto rounded-full my-4 border-2 border-[#172554] bg-[#18c7c1] px-4 py-2 font-bold"
+                    href="assets/Lettre_de_recommandation_Clara_SCAN-R.pdf"
+                    download="Lettre_de_recommandation_Clara_SCAN-R.pdf" target="_blank" rel="noopener noreferrer"
+                    style="background: rgb(245, 54, 134); color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">
+                    <i data-lucide="arrow-down-to-line"></i> Télécharger la lettre
+                </a>
+            </div>
+        </section>
         <section id="videos" class="px-5 py-20 lg:px-8">
             <div class="mx-auto max-w-7xl">
                 <div class="reveal">
@@ -1252,6 +1314,14 @@
             if (img) openModal(img.src, img.alt, title);
         });
     });
+
+    const aboutPinnedCard = document.getElementById('about-pinned-card');
+    if (aboutPinnedCard) {
+        aboutPinnedCard.addEventListener('click', () => {
+            const img = aboutPinnedCard.querySelector('img');
+            if (img) openModal(img.src, img.alt, 'Clara · En studio 🎙️');
+        });
+    }
 
     if (modalClose) {
         modalClose.addEventListener('click', closeModal);
