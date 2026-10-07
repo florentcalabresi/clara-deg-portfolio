@@ -8,13 +8,15 @@
 
     <!-- Meta Tags Généraux -->
     <meta name="title" content="Clara Degrange — Portfolio communication &amp; médias">
-    <meta name="description" content="Étudiante en communication, animatrice TV/radio et créatrice de contenus. Découvrez mes projets, expériences et coulisses de production.">
+    <meta name="description"
+        content="Étudiante en communication, animatrice TV/radio et créatrice de contenus. Découvrez mes projets, expériences et coulisses de production.">
     <meta name="author" content="Clara Degrange">
 
     <!-- Open Graph (Discord, Facebook, Instagram, LinkedIn, WhatsApp) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Clara Degrange — Portfolio communication &amp; médias">
-    <meta property="og:description" content="Étudiante en communication, animatrice TV/radio et créatrice de contenus. Découvrez mes projets, expériences et coulisses de production.">
+    <meta property="og:description"
+        content="Étudiante en communication, animatrice TV/radio et créatrice de contenus. Découvrez mes projets, expériences et coulisses de production.">
     <meta property="og:image" content="https://clara-degrange.com/assets/47E5E5F0-FB50-4F4C-B979-38FBF917DB19.jpeg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="1536">
@@ -26,7 +28,8 @@
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Clara Degrange — Portfolio communication &amp; médias">
-    <meta name="twitter:description" content="Étudiante en communication, animatrice TV/radio et créatrice de contenus. Découvrez mes projets, expériences et coulisses de production.">
+    <meta name="twitter:description"
+        content="Étudiante en communication, animatrice TV/radio et créatrice de contenus. Découvrez mes projets, expériences et coulisses de production.">
     <meta name="twitter:image" content="https://clara-degrange.com/assets/47E5E5F0-FB50-4F4C-B979-38FBF917DB19.jpeg">
     <meta name="twitter:image:alt" content="Clara Degrange en studio de télévision">
 
@@ -43,6 +46,59 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,700;9..144,800&amp;display=swap"
         rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        /* === Scrollbar épurée selon la D-A (sans fond blanc, sans flèches) === */
+        /* Standard pour Firefox */
+        html {
+            scrollbar-width: thin;
+            scrollbar-color: #ffd53d transparent;
+        }
+
+        /* Navigateurs Chromium / WebKit (Chrome, Edge, Safari, Opera) */
+        ::-webkit-scrollbar {
+            width: 10px;
+            height: 10px;
+        }
+
+        /* Fond de piste 100% transparent (supprime le fond blanc/crème) */
+        ::-webkit-scrollbar-track,
+        ::-webkit-scrollbar-track-piece,
+        ::-webkit-scrollbar-corner {
+            background: transparent !important;
+            border: none !important;
+        }
+
+        /* Supprime totalement les flèches et boutons de défilement */
+        ::-webkit-scrollbar-button,
+        ::-webkit-scrollbar-button:single-button,
+        ::-webkit-scrollbar-button:vertical:decrement,
+        ::-webkit-scrollbar-button:vertical:increment,
+        ::-webkit-scrollbar-button:horizontal:decrement,
+        ::-webkit-scrollbar-button:horizontal:increment {
+            display: none !important;
+            width: 0 !important;
+            height: 0 !important;
+        }
+
+        /* Curseur (Thumb) : pilule jaune avec bordure nette #172554 */
+        ::-webkit-scrollbar-thumb {
+            background-color: #ffd53d;
+            border: 2px solid #172554;
+            border-radius: 9999px;
+            transition: background-color 0.2s ease;
+        }
+
+        /* Survol : rose punchy (#f53686) */
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #f53686;
+        }
+
+        /* Clic actif : violet (#7137d8) */
+        ::-webkit-scrollbar-thumb:active {
+            background-color: #7137d8;
+        }
+    </style>
 </head>
 
 <body class="relative flex flex-col">
@@ -102,13 +158,21 @@
                     </div>
                 </div>
                 <span class="text-2xl font-[Fraunces] text-white">
-                    Je suis Clara, bienvenue dans mon univers
+                    Bienvenue dans mon univers
                 </span>
                 <span class="text-[18px] font-bold text-white">Étudiante en communication, animatrice et créatrice de
                     contenus</span>
-                <span class="text-6 text-white w-34">J’aime raconter, créer et donner vie aux idées. À travers la
-                    communication et les médias, je<br />cherche à apprendre, à rencontrer les autres et à construire
-                    des projets qui ont du sens.
+                <span class="text-6 text-white w-34">
+                    <p>Moi, Clara Étudiante en communication, animatrice et chroniqueuse</p>
+                    <p>J’aime raconter, créer et donner vie aux idées. À travers la communication et les médias, je
+                        cherche à apprendre, à rencontrer les autres et à construire des projets qui ont du sens.</p>
+                    <!--<p>Je m’appelle Clara, j’ai 19 ans et je suis actuellement en première année de bachelier en
+                        communication à la HEPL. Je suis une personne curieuse, créative et humaine.</p>
+                    <p>J’aime écrire, découvrir de nouvelles choses et travailler avec d’autres personnes. L’écriture
+                        occupe une place importante dans ma vie : elle m’a beaucoup aidée et me permet encore
+                        aujourd’hui de mettre des mots sur mes idées. </p>
+                    <p>Je m’intéresse particulièrement aux médias, à la création et à tout ce qui permet de donner une
+                        voix aux personnes et aux projets.</p>-->
                 </span>
                 <div class="flex flex-col lg:flex-row items-center gap-4">
                     <a href="#about"
@@ -179,9 +243,9 @@
                 </div>
             </div>
             <div
-                class="flex flex-col w-full lg:w-auto gap-4 rounded-[2.5rem_1rem_2.5rem_1rem]  border-[#172554] bg-white !text-white p-6 shadow_animate_card">
-                <span id="about_p1" class="text-[var(--ink)]">ABOUT_P1_VAR</span>
-                <span id="about_p2" class="text-[var(--ink)]">ABOUT_P2_VAR</span>
+                class="flex flex-col w-full lg:w-auto gap-4 lg:max-w-[42rem] rounded-[2.5rem_1rem_2.5rem_1rem] border-[#172554] bg-white !text-white p-6 shadow_animate_card">
+                <span id="about_p1" class="text-[var(--ink)]"></span>
+                <!--<span id="about_p2" class="text-[var(--ink)]"></span>-->
                 <div class="mt-8 grid gap-3 sm:grid-cols-3">
                     <div class="rounded-[1.3rem] border-2 border-[#172554] bg-[#f53686] p-4 text-white">
                         <i data-lucide="pen-line" class="mb-3 h-5 w-5"></i>
@@ -236,7 +300,7 @@
                     class="flex flex-col gap-2 bg-[var(--turquoise)] w-full border-[3px] border-[#172554] rounded-[1rem_2.5rem_1rem_2.5rem] p-6 transition-all hover:-rotate-2 hover:translateX-2 hover:shadow-[5px_5px_0_#172554]">
                     <i data-lucide="wand-sparkles" class="mb-6 h-8 w-8"></i>
                     <span class="font-bold text-[15px]">Montage et création visuelle</span>
-                    <span>Je maîtrise CapCut et Canva, et je possède de petites bases en dessin qui nourrissent ma
+                    <span>Je maîtrise CapCut et Canva, et je possède des bases en dessin qui nourrissent ma
                         créativité.</span>
                 </div>
                 <div
@@ -254,9 +318,9 @@
             <div class="flex justify-between">
                 <span class="font-[Fraunces] text-[18px]">Apprendre au contact des médias.</span>
             </div>
-            <div class="mt-10 grid gap-5 md:grid-cols-2">
+            <div class="mt-10 grid gap-5 lg:grid-cols-2">
                 <article data-template-id="project-scanr" data-category="tv radio writing"
-                    class="canva-card project-card reveal rounded-[2rem_1rem_2rem_1rem] border-[3px] border-[#172554] p-7"
+                    class="canva-card project-card reveal rounded-[2rem_1rem_2rem_1rem] border-[3px] border-[#172554] p-7 lg:max-h-[226px]"
                     style="background: rgb(255, 255, 255);">
                     <span data-template-id="project-scanr-tag"
                         class="canva-tag inline-block rounded-full px-3 py-1 text-xs font-bold"
@@ -266,52 +330,76 @@
                         style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 24px;">ASBL
                         Scan-R</h3>
                     <p data-template-id="project-scanr-text" class="canva-text mt-3 leading-relaxed"
-                        style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;">Au sein
-                        de l’ASBL Scan-R, je participe à des émissions TV et radio ainsi qu’à des cartes blanches. Cette
-                        expérience me permet de prendre la parole, de préparer du contenu et de travailler avec une
-                        équipe.</p>
+                        style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;"></p>
+                    Au sein de l’ASBL Scan-R, je participe à des émissions TV et radio ainsi qu’à l’écriture de cartes
+                    blanches dans des dossiers thématiques. Cette expérience me permet de prendre la parole, de préparer
+                    du contenu et de travailler avec une équipe.
+                    </p>
                 </article>
                 <article data-template-id="project-faux" data-category="tv"
-                    class="canva-card project-card reveal rounded-[1rem_2rem_1rem_2rem] border-[3px] border-[#172554] p-7"
+                    class="canva-card project-card reveal rounded-[1rem_2rem_1rem_2rem] border-[3px] border-[#172554] p-7 lg:max-h-[226px]"
                     style="background: rgb(255, 213, 61);">
                     <span data-template-id="project-faux-tag"
                         class="canva-tag inline-block rounded-full px-3 py-1 text-xs font-bold"
                         style="background: rgb(245, 54, 134); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">TV</span>
                     <h3 data-template-id="project-faux-title" class="canva-text mt-5 text-2xl font-bold"
-                        style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 24px;">« C'est
-                        pas faux ! » · médias Qu4tre</h3>
+                        style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 24px;">
+                        « C'est pas faux ! » · Médias Qu4tre
+                    </h3>
                     <p data-template-id="project-faux-text" class="canva-text mt-3 leading-relaxed"
-                        style="color: rgb(23, 37, 84); font-weight: 400; font-style: normal; font-size: 16px;">J’ai
-                        animé l’émission TV « C’est pas faux ! », une expérience qui m’a permis de développer mon
-                        aisance face caméra et ma capacité à m’adapter à un plateau.</p>
+                        style="color: rgb(23, 37, 84); font-weight: 400; font-style: normal; font-size: 16px;">
+                        médias Qu4tre J’ai animé l’émission TV « C’est pas faux ! », une expérience qui m’a permis
+                        d’apprendre à synthétiser mes propos et à mieux m’exprimer dans un temps réduit. L’émission ne
+                        durant que 12 minutes, c’est un vrai défi.
+                    </p>
                 </article>
                 <article data-template-id="project-generation" data-category="tv"
-                    class="canva-card project-card reveal rounded-[2rem_1rem_2rem_1rem] border-[3px] border-[#172554] p-7"
+                    class="canva-card project-card reveal rounded-[2rem_1rem_2rem_1rem] border-[3px] border-[#172554] p-7 lg:max-h-[226px]"
                     style="background: rgb(24, 199, 193);">
                     <span data-template-id="project-generation-tag"
                         class="canva-tag inline-block rounded-full px-3 py-1 text-xs font-bold"
                         style="background: rgb(23, 37, 84); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">TV</span>
                     <h3 data-template-id="project-generation-title" class="canva-text mt-5 text-2xl font-bold"
-                        style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 24px;">«
-                        Génération Scan-R » · Vedia</h3>
+                        style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 24px;">
+                        « Génération Scan-R » · Vedia
+                    </h3>
                     <p data-template-id="project-generation-text" class="canva-text mt-3 leading-relaxed"
-                        style="color: rgb(23, 37, 84); font-weight: 400; font-style: normal; font-size: 16px;">J’ai
-                        participé à l’animation de « Génération Scan-R » chez Vedia, en découvrant davantage le
-                        fonctionnement d’une émission et le travail d’équipe nécessaire à sa réalisation.</p>
+                        style="color: rgb(23, 37, 84); font-weight: 400; font-style: normal; font-size: 16px;">
+                        Vedia J’ai participé à cette émission et j’y ai découvert davantage le fonctionnement d’une
+                        production ainsi que le travail d’équipe nécessaire à sa réalisation. C’était aussi ma première
+                        expérience face caméra, où j’ai assuré la chronique et l’animation.
+                    </p>
                 </article>
                 <article data-template-id="project-politik" data-category="tv"
-                    class="canva-card project-card reveal rounded-[1rem_2rem_1rem_2rem] border-[3px] border-[#172554] p-7"
+                    class="canva-card project-card reveal rounded-[1rem_2rem_1rem_2rem] border-[3px] border-[#172554] p-7 lg:max-h-[226px] lg:overflow-y-auto"
                     style="background: rgb(245, 233, 255);">
                     <span data-template-id="project-politik-tag"
                         class="canva-tag inline-block rounded-full px-3 py-1 text-xs font-bold"
                         style="background: rgb(113, 55, 216); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">TV</span>
                     <h3 data-template-id="project-politik-title" class="canva-text mt-5 text-2xl font-bold"
-                        style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 24px;">«
-                        Politik-air » · Vedia</h3>
-                    <p data-template-id="project-politik-text" class="canva-text mt-3 leading-relaxed"
-                        style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;">J’ai
-                        également animé « Politik-air » chez Vedia, ce qui m’a permis de continuer à développer ma prise
-                        de parole et mon intérêt pour les sujets de société.</p>
+                        style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 24px;">
+                        « Politik-air » · Vedia
+                    </h3>
+                    <div data-template-id="project-politik-text" class="canva-text mt-3 leading-relaxed overflow-y-auto"
+                        style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;">
+                        <p>J’ai également tenu une chronique dans « Politik-air », ce qui m’a permis de continuer à
+                            développer ma prise de parole et à aborder des sujets politiques pour les rendre accessibles
+                            aux
+                            jeunes.</p>
+                        <p>Mon intérêt pour les sujets de société étant déjà très fort, cela me convenait
+                            parfaitement. Je suis créative, curieuse et j’aime avancer en équipe. Je sais que j’ai
+                            encore
+                            beaucoup à apprendre, mais c’est justement ce qui me motive.</p>
+                        <p>Chaque projet est pour moi une
+                            occasion de progresser, de tester de nouvelles idées et de mieux comprendre le monde des
+                            médias.
+                            Je construis mon parcours en communication avec curiosité, polyvalence et ambition. J’aime
+                            découvrir les régies, les plateaux, les écrans, les tournages et tout le travail collectif
+                            qui
+                            donne vie aux projets.</p>
+                        <p>Mon parcours en un coup d’œil. Retrouvez ici mon parcours, mes
+                            expériences et mes compétences à travers mon CV.</p>
+                    </div>
                 </article>
             </div>
         </section>
@@ -342,93 +430,6 @@
             <div id="gallery-carousel"
                 class="mt-4 flex gap-6 overflow-x-auto scroll-smooth snap-x snap-mandatory py-4 px-1 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden focus:outline-none cursor-grab active:cursor-grabbing select-none"
                 tabindex="0" aria-label="Galerie de photos">
-
-                <article
-                    class="gallery-card snap-start shrink-0 w-[290px] sm:w-[340px] md:w-[380px] flex flex-col rounded-[2rem_1rem_2rem_1rem] overflow-hidden border-[3px] border-[#172554] bg-white shadow-[6px_6px_0_#ffd53d] group transition-all duration-300 hover:-translate-y-2 hover:shadow-[8px_8px_0_#f53686]">
-                    <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900">
-                        <img src="assets/47E5E5F0-FB50-4F4C-B979-38FBF917DB19.jpeg"
-                            alt="Clara dans le studio télévisé de l'émission C'est pas faux !"
-                            class="gallery-img h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            loading="lazy" />
-                        <span
-                            class="absolute top-3 left-3 rounded-full bg-[#f53686] text-white border-2 border-[#172554] px-3 py-0.5 text-xs font-bold uppercase tracking-wider shadow-[2px_2px_0_#172554]">
-                            TV
-                        </span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-1 justify-between bg-white text-[#172554]">
-                        <div>
-                            <h3 class="font-bold text-lg text-[#172554] leading-snug">Studio TV · « C'est pas faux ! »
-                            </h3>
-                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Plateau télévisé de l'émission,
-                                travail d'équipe et animation face caméra.</p>
-                        </div>
-                        <div
-                            class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-500">
-                            <span>Qu4tre</span>
-                            <i data-lucide="video" class="h-4 w-4 text-[var(--violet)]"></i>
-                        </div>
-                    </div>
-                </article>
-
-                <article
-                    class="gallery-card snap-start shrink-0 w-[290px] sm:w-[340px] md:w-[380px] flex flex-col rounded-[1rem_2rem_1rem_2rem] overflow-hidden border-[3px] border-[#172554] bg-white shadow-[6px_6px_0_#18c7c1] group transition-all duration-300 hover:-translate-y-2 hover:shadow-[8px_8px_0_#f53686]">
-                    <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900">
-                        <img src="assets/5d179b4d-05ae-4c15-aac4-3269240da333.jpeg"
-                            alt="Session radio en studio avec plusieurs micros"
-                            class="gallery-img h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            loading="lazy" />
-                        <span
-                            class="absolute top-3 left-3 rounded-full bg-[#18c7c1] text-[#172554] border-2 border-[#172554] px-3 py-0.5 text-xs font-bold uppercase tracking-wider shadow-[2px_2px_0_#172554]">
-                            Radio
-                        </span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-1 justify-between bg-white text-[#172554]">
-                        <div>
-                            <h3 class="font-bold text-lg text-[#172554] leading-snug">Session radio en studio</h3>
-                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Animation collective et tables rondes
-                                avec plusieurs personnes autour des micros.</p>
-                        </div>
-                        <div
-                            class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-500">
-                            <span>Equinoxe FM</span>
-                            <i data-lucide="mic" class="h-4 w-4 text-[var(--turquoise)]"></i>
-                        </div>
-                    </div>
-                </article>
-
-                <article
-                    class="gallery-card snap-start shrink-0 w-[290px] sm:w-[340px] md:w-[380px] flex flex-col rounded-[2rem_1rem_2rem_1rem] overflow-hidden border-[3px] border-[#172554] bg-white shadow-[6px_6px_0_#7137d8] group transition-all duration-300 hover:-translate-y-2 hover:shadow-[8px_8px_0_#ffd53d]">
-                    <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900">
-                        <img src="assets/cdeg_au_micro.webp" alt="Clara avec un casque devant un microphone de radio"
-                            class="gallery-img h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
-                            loading="lazy" />
-                        <span
-                            class="absolute top-3 left-3 rounded-full bg-[#7137d8] text-white border-2 border-[#172554] px-3 py-0.5 text-xs font-bold uppercase tracking-wider shadow-[2px_2px_0_#172554]">
-                            Voix
-                        </span>
-                    </div>
-                    <div class="p-5 flex flex-col flex-1 justify-between bg-white text-[#172554]">
-                        <div>
-                            <h3 class="font-bold text-lg text-[#172554] leading-snug">Au micro</h3>
-                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Casque aux oreilles et micro
-                                ouvert
-                                pour donner une voix aux sujets qui comptent.</p>
-                        </div>
-                        <a
-                            class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-500">
-                            <span>Prise de parole</span>
-                            <i data-lucide="radio" class="h-4 w-4 text-[var(--violet)]"></i>
-                        </a>
-                    </div>
-                    <div class="flex justify-center mb-2">
-                        <a href="https://open.spotify.com/episode/2w83FnirzTWOFgEwqRFwTb?si=ZpL8dy23RBG8xcuaSNMBeA&utm_source=copy-link"
-                            target="_blank" class="bg-[#1ed760] flex items-center w-fit px-4 py-2 rounded-2xl gap-2">
-                            <i data-lucide="play"></i>
-                            <span>Écouter</span>
-                        </a>
-                    </div>
-                </article>
-
                 <article
                     class="gallery-card snap-start shrink-0 w-[290px] sm:w-[340px] md:w-[380px] flex flex-col rounded-[1rem_2rem_1rem_2rem] overflow-hidden border-[3px] border-[#172554] bg-white shadow-[6px_6px_0_#ffd53d] group transition-all duration-300 hover:-translate-y-2 hover:shadow-[8px_8px_0_#18c7c1]">
                     <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900">
@@ -443,8 +444,6 @@
                     <div class="p-5 flex flex-col flex-1 justify-between bg-white text-[#172554]">
                         <div>
                             <h3 class="font-bold text-lg text-[#172554] leading-snug">Une aventure collective</h3>
-                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">L'émulation et la créativité partagée
-                                lors des ateliers et sessions de groupe.</p>
                         </div>
                         <div
                             class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-500">
@@ -468,8 +467,6 @@
                     <div class="p-5 flex flex-col flex-1 justify-between bg-white text-[#172554]">
                         <div>
                             <h3 class="font-bold text-lg text-[#172554] leading-snug">Régie et production média</h3>
-                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Multi-écrans, commutateurs et
-                                coordination des flux vidéo en temps réel.</p>
                         </div>
                         <div
                             class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-500">
@@ -478,7 +475,6 @@
                         </div>
                     </div>
                 </article>
-
                 <article
                     class="gallery-card snap-start shrink-0 w-[290px] sm:w-[340px] md:w-[380px] flex flex-col rounded-[2rem_1rem_2rem_1rem] overflow-hidden border-[3px] border-[#172554] bg-white shadow-[6px_6px_0_#ffd53d] group transition-all duration-300 hover:-translate-y-2 hover:shadow-[8px_8px_0_#18c7c1]">
                     <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900">
@@ -495,8 +491,6 @@
                     <div class="p-5 flex flex-col flex-1 justify-between bg-white text-[#172554]">
                         <div>
                             <h3 class="font-bold text-lg text-[#172554] leading-snug">Coulisses du plateau</h3>
-                            <p class="mt-2 text-sm text-slate-600 leading-relaxed">Préparation, répétitions et
-                                concentration avant le direct avec l'équipe.</p>
                         </div>
                         <div
                             class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-500">
@@ -505,7 +499,82 @@
                         </div>
                     </div>
                 </article>
-
+                <article
+                    class="gallery-card snap-start shrink-0 w-[290px] sm:w-[340px] md:w-[380px] flex flex-col rounded-[2rem_1rem_2rem_1rem] overflow-hidden border-[3px] border-[#172554] bg-white shadow-[6px_6px_0_#ffd53d] group transition-all duration-300 hover:-translate-y-2 hover:shadow-[8px_8px_0_#f53686]">
+                    <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900">
+                        <img src="assets/47E5E5F0-FB50-4F4C-B979-38FBF917DB19.jpeg"
+                            alt="Clara dans le studio télévisé de l'émission C'est pas faux !"
+                            class="gallery-img h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy" />
+                        <span
+                            class="absolute top-3 left-3 rounded-full bg-[#f53686] text-white border-2 border-[#172554] px-3 py-0.5 text-xs font-bold uppercase tracking-wider shadow-[2px_2px_0_#172554]">
+                            TV
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1 justify-between bg-white text-[#172554]">
+                        <div>
+                            <h3 class="font-bold text-lg text-[#172554] leading-snug">Studio TV · « C'est pas faux ! »
+                            </h3>
+                        </div>
+                        <div
+                            class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-500">
+                            <span>Qu4tre</span>
+                            <i data-lucide="video" class="h-4 w-4 text-[var(--violet)]"></i>
+                        </div>
+                    </div>
+                </article>
+                <article
+                    class="gallery-card snap-start shrink-0 w-[290px] sm:w-[340px] md:w-[380px] flex flex-col rounded-[1rem_2rem_1rem_2rem] overflow-hidden border-[3px] border-[#172554] bg-white shadow-[6px_6px_0_#18c7c1] group transition-all duration-300 hover:-translate-y-2 hover:shadow-[8px_8px_0_#f53686]">
+                    <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900">
+                        <img id="radio_studio_diap" alt="Session radio en studio avec plusieurs micros"
+                            class="gallery-img h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy" />
+                        <span
+                            class="absolute top-3 left-3 rounded-full bg-[#18c7c1] text-[#172554] border-2 border-[#172554] px-3 py-0.5 text-xs font-bold uppercase tracking-wider shadow-[2px_2px_0_#172554]">
+                            Radio
+                        </span>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1 justify-between bg-white text-[#172554]">
+                        <div>
+                            <h3 class="font-bold text-lg text-[#172554] leading-snug">Session radio en studio</h3>
+                        </div>
+                        <div
+                            class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-500">
+                            <span>Equinoxe FM</span>
+                            <i data-lucide="mic" class="h-4 w-4 text-[var(--turquoise)]"></i>
+                        </div>
+                    </div>
+                </article>
+                <article
+                    class="gallery-card snap-start shrink-0 w-[290px] sm:w-[340px] md:w-[380px] flex flex-col rounded-[2rem_1rem_2rem_1rem] overflow-hidden border-[3px] border-[#172554] bg-white shadow-[6px_6px_0_#7137d8] group transition-all duration-300 hover:-translate-y-2 hover:shadow-[8px_8px_0_#ffd53d]">
+                    <div class="relative h-56 sm:h-64 w-full overflow-hidden bg-slate-900">
+                        <img src="assets/cdeg_au_micro.webp" alt="Clara avec un casque devant un microphone de radio"
+                            class="gallery-img h-full w-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            loading="lazy" />
+                        <span
+                            class="absolute top-3 left-3 rounded-full bg-[#7137d8] text-white border-2 border-[#172554] px-3 py-0.5 text-xs font-bold uppercase tracking-wider shadow-[2px_2px_0_#172554]">
+                            Voix
+                        </span>
+                        <div class="absolute right-3 top-3 flex justify-center mb-2">
+                            <a href="https://open.spotify.com/episode/2w83FnirzTWOFgEwqRFwTb?si=ZpL8dy23RBG8xcuaSNMBeA&utm_source=copy-link"
+                                target="_blank"
+                                class="bg-[#1ed760] flex items-center w-fit px-4 py-2 rounded-2xl gap-2">
+                                <i data-lucide="play"></i>
+                                <span>Écouter</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="p-5 flex flex-col flex-1 justify-between bg-white text-[#172554]">
+                        <div>
+                            <h3 class="font-bold text-lg text-[#172554] leading-snug">Au micro</h3>
+                        </div>
+                        <a
+                            class="mt-4 pt-3 border-t border-slate-200 flex items-center justify-between text-xs font-semibold text-slate-500">
+                            <span>Prise de parole</span>
+                            <i data-lucide="radio" class="h-4 w-4 text-[var(--violet)]"></i>
+                        </a>
+                    </div>
+                </article>
             </div>
 
             <div id="carousel-dots" class="mt-4 flex items-center justify-center gap-2"></div>
@@ -639,7 +708,7 @@
                 <p data-template-id="personal-text" class="canva-text mt-6 max-w-3xl text-lg leading-relaxed"
                     style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;">Je suis
                     créative, curieuse et j’aime avancer en équipe. Je sais que j’ai encore beaucoup à apprendre, mais
-                    c’est justement ce qui me motive. Chaque projet est pour moi une occasion de progresser, de tester
+                    c’est justement ce qui me motive.Chaque projet est pour moi une occasion de progresser, de tester
                     de nouvelles idées et de mieux comprendre le monde des médias.</p>
             </div>
         </section>
@@ -694,28 +763,28 @@
                         <h3 data-template-id="experience-regie-title" class="canva-text text-2xl font-bold"
                             style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 24px;">Une
                             expérience concrète</h3>
-                        <p data-template-id="experience-regie-text" class="canva-text mt-3 leading-relaxed"
-                            style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;">Je
-                            participe à des émissions TV et radio, à des tournages et à des projets de rédaction auprès
-                            de Qu4tre, Védia et EquinoxFm. Ces expériences m’apprennent à préparer du contenu, prendre
-                            la parole et travailler en équipe.</p>
                         <div class="mt-6 flex flex-wrap gap-3">
                             <a data-template-id="instagram-one"
                                 class="canva-button focus-ring pointer-events-auto rounded-full border-2 border-[#172554] bg-[#f53686] px-4 py-2 font-bold text-white"
                                 href="https://www.instagram.com/reel/DdYYfYOjfEy/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA=="
                                 target="_blank" rel="noopener noreferrer"
-                                style="background: rgb(245, 54, 134); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Voir
-                                ma présentation au sein de la rédaction</a><a data-template-id="instagram-two"
+                                style="background: rgb(245, 54, 134); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">
+                                Voir ma présentation au sein de la rédaction
+                            </a>
+                            <a data-template-id="instagram-two"
                                 class="canva-button focus-ring pointer-events-auto rounded-full border-2 border-[#172554] bg-[#ffd53d] px-4 py-2 font-bold"
                                 href="https://www.instagram.com/reel/DWGbZbpNunp/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA=="
                                 target="_blank" rel="noopener noreferrer"
-                                style="background: rgb(255, 213, 61); color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">Découvrir
-                                une autre participation</a><a data-template-id="instagram-three"
+                                style="background: rgb(255, 213, 61); color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">
+                                Découvrir une autre participation
+                            </a>
+                            <a data-template-id="instagram-three"
                                 class="canva-button focus-ring pointer-events-auto rounded-full border-2 border-[#172554] bg-[#18c7c1] px-4 py-2 font-bold"
                                 href="https://www.instagram.com/reel/DZxelj8tIIQ/?utm_source=ig_web_copy_link&amp;stkn=MzRlODBiNWFlZA=="
                                 target="_blank" rel="noopener noreferrer"
-                                style="background: rgb(24, 199, 193); color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">Voir
-                                un autre extrait</a>
+                                style="background: rgb(24, 199, 193); color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 16px;">
+                                Voir un autre extrait
+                            </a>
                         </div>
                     </article>
                 </div>
@@ -823,9 +892,12 @@
             </div>
         </section>
         <footer data-template-id="site-footer"
-            class="canva-footer flex flex-col border-t-[3px] border-[#172554] px-5 py-7 text-center text-sm"
+            class="canva-footer flex flex-col items-center gap-2 border-t-[3px] border-[#172554] px-5 py-7 text-center text-sm"
             style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;">
-            © Clara — Mon portfolio<br/>communication &amp; médias
+            © Clara — Mon portfolio<br />communication &amp; médias
+            <span class="flex items-center text-xs gap-2">
+                <i data-lucide="palette" class="text-xs w-4 h-4s"></i>D-A dirigée par Clara Degrange
+            </span>
             <span class="text-xs">
                 Développé avec le ❤️ par <a target="_blank" href="https://github.com/florentcalabresi">Florent Calabrési
                     (SunshineDev)</a>
@@ -872,7 +944,7 @@
     });
 
     document.getElementById('about_p1').innerHTML = data.about_p1;
-    document.getElementById('about_p2').innerHTML = data.about_p2;
+    //document.getElementById('about_p2').innerHTML = data.about_p2;
 
     /**
      * Initialise un diaporama d'images réutilisable avec effet de fondu (fade) et barre de progression.
@@ -984,9 +1056,14 @@
     createFadeSlideshow('adventure_diap', [
         'assets/IMG_3521.jpg',
         'assets/IMG_1555.jpg',
-        'assets/IMG_1551.jpg',
         'assets/e7020eba-fe65-4e9a-8bd5-1d59326d592c.jpg',
     ], { interval: 10000, fadeDuration: 500, barColor: '#ffd53d' });
+
+
+    createFadeSlideshow('radio_studio_diap', [
+        'assets/IMG_1551.jpg',
+        'assets//5d179b4d-05ae-4c15-aac4-3269240da333.jpeg'
+    ], { interval: 10000, fadeDuration: 500, barColor: '#18c7c1' });
 
 
     // === GESTION DU CAROUSEL GALERIE ===
