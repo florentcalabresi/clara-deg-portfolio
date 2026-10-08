@@ -407,8 +407,8 @@
                         expérience face caméra, où j’ai assuré la chronique et l’animation.
                     </p>
                 </article>
-                <article data-template-id="project-politik" data-category="tv"
-                    class="canva-card project-card reveal rounded-[1rem_2rem_1rem_2rem] border-[3px] border-[#172554] p-7 lg:max-h-[226px] lg:overflow-y-auto"
+                <article id="project-politik-card" data-template-id="project-politik" data-category="tv"
+                    class="canva-card project-card reveal relative rounded-[1rem_2rem_1rem_2rem] border-[3px] border-[#172554] p-7 lg:max-h-[226px] overflow-hidden transition-all duration-500"
                     style="background: rgb(245, 233, 255);">
                     <span data-template-id="project-politik-tag"
                         class="canva-tag inline-block rounded-full px-3 py-1 text-xs font-bold"
@@ -417,25 +417,37 @@
                         style="color: rgb(23, 37, 84); font-weight: 700; font-style: normal; font-size: 24px;">
                         « Politik-air » · Vedia
                     </h3>
-                    <div data-template-id="project-politik-text" class="canva-text mt-3 leading-relaxed overflow-y-auto"
+                    <div data-template-id="project-politik-text" class="canva-text mt-3 leading-relaxed"
                         style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;">
                         <p>J’ai également tenu une chronique dans « Politik-air », ce qui m’a permis de continuer à
                             développer ma prise de parole et à aborder des sujets politiques pour les rendre accessibles
                             aux
                             jeunes.</p>
-                        <p>Mon intérêt pour les sujets de société étant déjà très fort, cela me convenait
+                        <p class="mt-2">Mon intérêt pour les sujets de société étant déjà très fort, cela me convenait
                             parfaitement. Je suis créative, curieuse et j’aime avancer en équipe. Je sais que j’ai
                             encore
                             beaucoup à apprendre, mais c’est justement ce qui me motive.</p>
-                        <p>Chaque projet est pour moi une
+                        <p class="mt-2">Chaque projet est pour moi une
                             occasion de progresser, de tester de nouvelles idées et de mieux comprendre le monde des
                             médias.
                             Je construis mon parcours en communication avec curiosité, polyvalence et ambition. J’aime
                             découvrir les régies, les plateaux, les écrans, les tournages et tout le travail collectif
                             qui
                             donne vie aux projets.</p>
-                        <p>Mon parcours en un coup d’œil. Retrouvez ici mon parcours, mes
+                        <p class="mt-2">Mon parcours en un coup d’œil. Retrouvez ici mon parcours, mes
                             expériences et mes compétences à travers mon CV.</p>
+                    </div>
+
+                    <!-- Dégradé de fondu & Bouton Voir plus -->
+                    <div id="politik-overlay"
+                        class="hidden lg:flex absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[rgb(245,233,255)] via-[rgb(245,233,255)]/90 to-transparent items-end justify-center pb-3">
+                        <button id="politik-toggle-btn" type="button" aria-expanded="false"
+                            class="inline-flex items-center gap-1.5 px-4 py-1.5 text-xs font-bold rounded-full border-2 border-[#172554] bg-[#ffd53d] text-[#172554] shadow-[2px_2px_0_#172554] hover:bg-white hover:scale-105 active:scale-95 transition-all cursor-pointer">
+                            <span id="politik-btn-text">Voir plus</span>
+                            <span id="politik-btn-icon" class="inline-flex items-center justify-center">
+                                <i data-lucide="chevron-down" class="h-3.5 w-3.5"></i>
+                            </span>
+                        </button>
                     </div>
                 </article>
             </div>
@@ -629,7 +641,7 @@
                             Lettre de
                             recommendation</p>
                         <h2 data-template-id="values-title"
-                            class="canva-text display text-xl lg:text-4xl font-extrabold leading-[1.05] sm:text-5xl"
+                            class="canva-text display font-extrabold leading-[1.05] sm:text-xl lg:text-2xl 2xl:text-4xl"
                             style="color: rgb(23, 37, 84); font-weight: 800; font-style: normal;">
                             Écris par Jonas Grétry, Directeur de l’ASBL Scan-R
                         </h2>
@@ -855,7 +867,7 @@
         </section>
         <section id="cv" data-template-id="cv-section" class="canva-section px-5 py-20 lg:px-8"
             style="background: rgb(255, 249, 237);">
-            <div class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
+            <div id="cv-grid" class="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[.8fr_1.2fr] lg:items-center">
                 <div class="reveal">
                     <p data-template-id="cv-eyebrow"
                         class="canva-text inline-block rounded-full bg-[#ffd53d] px-3 py-1 text-sm font-bold uppercase tracking-[.12em]"
@@ -868,21 +880,38 @@
                     <p data-template-id="cv-text" class="canva-text mt-5 max-w-md text-lg leading-relaxed"
                         style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;">Retrouvez
                         ici mon parcours, mes expériences et mes compétences.</p>
-                    <a href="/assets/CV_Degrange_Clara.pdf" download="CV Degrange Clara.pdf"
+                    <a href="assets/CV_Degrange_Clara.pdf" download="CV Degrange Clara.pdf"
                         class="canva-button focus-ring mt-7 inline-flex items-center gap-2 rounded-full border-2 border-[#172554] bg-[#172554] px-6 py-3 font-bold text-white"
                         style="background: rgb(23, 37, 84); color: rgb(255, 255, 255); font-weight: 700;">
                         <span data-template-id="cv-button-label"
                             style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Télécharger
                             mon CV</span><i data-lucide="download" class="h-4 w-4"></i> </a>
                 </div>
-                <section id="cv"
+                <section id="cv_preview"
                     class="canva-card reveal sticker mx-auto w-full max-w-2xl rounded-[1.5rem_2.5rem_1.5rem_2.5rem] border-[3px] border-[#172554] bg-white p-5"
                     style="background: rgb(255, 255, 255);">
-                    <object data="assets/CV_Degrange_Clara.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
+                    <object id="cv_object" data="assets/CV_Degrange_Clara.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
                         type="application/pdf" width="100%" height="600px" class="border-0" style="border: none;">
-                        <p>Votre navigateur ne supporte pas l'aperçu PDF.</p>
                     </object>
                 </section>
+                <script>
+                    (function () {
+                        // Masquer #cv_preview si le navigateur ne supporte pas l'aperçu PDF (ex: mobile)
+                        const isPdfSupported = 'pdfViewerEnabled' in navigator
+                            ? navigator.pdfViewerEnabled
+                            : Boolean(navigator.mimeTypes && navigator.mimeTypes['application/pdf']);
+
+                        if (!isPdfSupported) {
+                            const preview = document.getElementById('cv_preview');
+                            if (preview) preview.remove();
+                            const grid = document.getElementById('cv-grid');
+                            if (grid) {
+                                grid.classList.remove('lg:grid-cols-[.8fr_1.2fr]');
+                                grid.classList.add('flex', 'flex-col', 'items-center', 'text-center');
+                            }
+                        }
+                    })();
+                </script>
             </div>
         </section>
         <section id="contact" class="px-5 py-20 lg:px-8">
@@ -1337,7 +1366,54 @@
         }
     });
 
-    // Re-rendre les nouvelles icônes Lucide de la galerie
+    // === TOGGLE "VOIR PLUS" POUR LE PROJET POLITIK-AIR ===
+    const politikCard = document.getElementById('project-politik-card');
+    const politikBtn = document.getElementById('politik-toggle-btn');
+    const politikText = document.getElementById('politik-btn-text');
+    const politikIcon = document.getElementById('politik-btn-icon');
+    const politikOverlay = document.getElementById('politik-overlay');
+
+    if (politikCard && politikBtn) {
+        let isExpanded = false;
+        politikBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            isExpanded = !isExpanded;
+
+            if (isExpanded) {
+                // Déplier la carte en height fit
+                politikCard.classList.remove('lg:max-h-[226px]');
+                politikCard.classList.add('lg:max-h-none', 'lg:pb-16');
+                if (politikText) politikText.textContent = 'Voir moins';
+                if (politikIcon) {
+                    politikIcon.innerHTML = '<i data-lucide="chevron-up" class="h-3.5 w-3.5"></i>';
+                    lucide.createIcons();
+                }
+                politikBtn.setAttribute('aria-expanded', 'true');
+                if (politikOverlay) {
+                    politikOverlay.classList.remove('h-24', 'bg-gradient-to-t', 'from-[rgb(245,233,255)]', 'via-[rgb(245,233,255)]/90');
+                    politikOverlay.classList.add('h-14');
+                }
+            } else {
+                // Replier à 226px
+                politikCard.classList.remove('lg:max-h-none', 'lg:pb-16');
+                politikCard.classList.add('lg:max-h-[226px]');
+                if (politikText) politikText.textContent = 'Voir plus';
+                if (politikIcon) {
+                    politikIcon.innerHTML = '<i data-lucide="chevron-down" class="h-3.5 w-3.5"></i>';
+                    lucide.createIcons();
+                }
+                politikBtn.setAttribute('aria-expanded', 'false');
+                if (politikOverlay) {
+                    politikOverlay.classList.add('h-24', 'bg-gradient-to-t', 'from-[rgb(245,233,255)]', 'via-[rgb(245,233,255)]/90');
+                    politikOverlay.classList.remove('h-14');
+                }
+                politikCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }
+        });
+    }
+
+    // Re-rendre les nouvelles icônes Lucide de la galerie et du bouton
     lucide.createIcons();
 </script>
 
